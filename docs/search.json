@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "project",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me!",
     "section": "",
-    "text": "About this site"
+    "text": "Hi there! I’m Laura (pronounced ““). I am an Associate Professor of Statistics in the Department of Mathematics, Statistics, and Computer Science at Lawrence University, Appleton, Wisconsin. I am originally from Kolkata, India. I completed my Bachelors in Statistics from St. Xavier’s College, Kolkata, and my Masters from IIT, Kanpur. I earned my Ph.D. in Statistics from Iowa State University.\nI enjoy teaching and relish being in the company of students. Please visit my teaching and research pages to learn more about my academic activities.\nOutside the academic world, I enjoy running, biking, and going for hikes. My other interests include watching soccer as well as fiddling with my guitar."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Laura Henze!",
+    "section": "",
+    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University in the Biochemistry, Data Science, and Anthropology departments. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School where I gained my love for science. In the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something that I didn’t know about, but seemed like a handy skill to have. With this, I discovered my enjoyment of data science and producing informative figures for my technical lab reports.\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young and I’m very greatful to represent my team here. In addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time)."
   }
 ]

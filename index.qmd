@@ -1,7 +1,26 @@
 ---
-title: "project"
+title: "Laura Henze!"
+image: images/_DSC4929.jpg
+toc: false
+about: 
+  template: jolla
+  image-shape: round
+  image-width: 15em
 ---
 
-This is a Quarto website.
+::: {#bio}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Hi there! I'm Laura (pronounced "LOR-uh"). I am an Undergraduate Student at [Lawrence University](https://www.lawrence.edu/) in the Biochemistry, Data Science, and Anthropology departments. I'm a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School where I gained my love for science. In the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology. 
+
+Through my explorations of research at Lawrence, I came to discover that data processing was something that I didn't know about, but seemed like a handy skill to have. With this, I discovered my enjoyment of data science and producing informative figures for my technical lab reports. 
+
+
+In addition to my academics, I compete on the Lawrence [Cross Country](https://vikings.lawrence.edu/sports/wcross) and [Track and Field](https://vikings.lawrence.edu/sports/wcross) teams in my extra time. Running has continued to be one of my passions since I was young and I'm very greatful to represent my team here. In addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).
+
+::: {#landing-icons}
+[{{< fa brands github title="github" >}}](https://github.com/Laura-Henze){target="_blank"} &nbsp; [{{< fa envelope title="envelope" >}}](mailto:laura.k.henze@lawrence.edu)
+:::
+:::
+
+<!-- [{{< fa brands bluesky title="bluesky" >}}](https://bsky.app/profile/samcsik.bsky.social){target="_blank"} &nbsp;  -->
+<!-- [{{< fa brands bluesky title="bluesky" >}}](https://bsky.app/profile/samcsik.bsky.social){target="_blank"} &nbsp;  -->
