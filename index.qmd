@@ -1,11 +1,20 @@
 ---
-title: "Laura Henze!"
-image: images/_DSC4929.jpg
-toc: false
-about: 
-  template: jolla
+title: "Home"
+about:
+  id: intro-heading
+  template: trestles
+  image-width: 20em
   image-shape: round
-  image-width: 15em
+  image: images/_DSC4929.jpg
+  links:
+    - icon: envelope
+      href: mailto:henzel@lawrence.edu
+    - icon: github
+      href: https://github.com/Laura-Henze
+---
+:::{#intro-heading}
+## About Me!
+
 ---
 
 ::: {#bio}
@@ -16,11 +25,3 @@ Through my explorations of research at Lawrence, I came to discover that data pr
 
 
 In addition to my academics, I compete on the Lawrence [Cross Country](https://vikings.lawrence.edu/sports/wcross) and [Track and Field](https://vikings.lawrence.edu/sports/wcross) teams in my extra time. Running has continued to be one of my passions since I was young and I'm very greatful to represent my team here. In addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).
-
-::: {#landing-icons}
-[{{< fa brands github title="github" >}}](https://github.com/Laura-Henze){target="_blank"} &nbsp; [{{< fa envelope title="envelope" >}}](mailto:laura.k.henze@lawrence.edu)
-:::
-:::
-
-<!-- [{{< fa brands bluesky title="bluesky" >}}](https://bsky.app/profile/samcsik.bsky.social){target="_blank"} &nbsp;  -->
-<!-- [{{< fa brands bluesky title="bluesky" >}}](https://bsky.app/profile/samcsik.bsky.social){target="_blank"} &nbsp;  -->

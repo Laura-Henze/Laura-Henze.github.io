@@ -1,0 +1,149 @@
+---
+title: "ggblanket and ggbeeswarm: An Overview"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+library(tidyverse)
+```
+
+
+## Introduction
+
+In this exploration, you will actively learn the uses of the ggblanket and ggbeeswarm extensions of ggplot2. These two extensions allow for quicker to write code and easier to understand visualizations while still maintaining the key functions available when using ggplot2. ggblanket, although very similar to ggplot2, has unique features that allow for the swift composition of visualizations with fewer steps. ggbeeswarm allows for the creation of bee swarm plots, an easy way to view data with many plotted points.  
+
+
+## Dataset
+
+
+The dataset that we will be coupling with these extensions is the Bear Attacks North America dataset from the dataset website kaggle. The Bear Attacks North America dataset displays every recorded killing by a black, brown, or polar bear from 1900-present day in North America. Data includes information about the killings including location, date of attack, as well as information about the deceased including their gender and age.
+
+For these analyses, I have chosen to use a smaller, more manageable chunk of the dataset. This way, the bears attacks are limited to those in captivity rather than in the wild. (Data wrangling can be seen on the .rmd file below)
+
+```{r, echo=FALSE}
+# load your dataset(s) here
+bearAttacks<- read_csv("data (3).csv")
+captivebearAttacks <- filter(bearAttacks, (Type %in% c("Captive")) & !is.na(age) & !is.na (gender))
+
+```
+
+
+
+
+## Extension 1: ggblanket
+
+```{r, echo=FALSE}
+# to install a package, remove # and run following (you need to install a package only once), copy and paste the following code for each package
+install.packages("ggblanket")
+```
+
+```{r, echo=FALSE}
+# to load a package, remove # and run following, copy and paste the following code for each package
+library(ggblanket)
+```
+
+ggblanket is a ggplot extension used to simplify ggplot2 visualization as well as code writing. It aims to produce well-designed visualizations that align with both the ggplot2 and tidyverse packages. Some features include theme families provided with different variants on color, Smart *_label defaults for axis and legend titles, and a merged col argument to color and fill by a variable at the same time(typically used for box plots).
+
+
+
+```{r, eval=FALSE, echo=FALSE}
+# use this code chunk for your own practice, make as many copies as you want
+# note that the code and outputs from this chunk are set as not to be displayed in your final report
+
+captivebearAttacks |>
+   gg_boxplot(
+    x = age, 
+    y = gender, 
+    col = `Type of bear`)
+
+captivebearAttacks |>
+  gg_histogram(
+    x = age,
+    facet = Month,
+  )
+
+captivebearAttacks %>% 
+  gg_freqpoly(
+    x = age,
+    col = gender)
+
+```
+
+
+```{r}
+captivebearAttacks %>% # specify data set you are using
+  gg_freqpoly( # choose what type of visualization you'd like to make
+    x = age, col = gender, title = "Age and Gender Victim Demographics for Captive Bear Attacks") # specify your axes and any aesthetics such as color(col) and title.
+
+```
+
+#### Practice Exercise 1
+
+
+The ggblanket extension allows you to do a lot of the same things that are available in ggplot2. However, with ggblanket, the function gg_ allows for the wrapping of a geom, so we use that in place of geom_. Your task is to create a bar graph of age vs gender of the victim. Color the plot using the `Type of bear` variable. 
+
+```{r, eval=FALSE, echo=FALSE}
+# use this code chunk to write the solution for your practice exercise
+
+captivebearAttacks |>
+   gg_boxplot(
+    x = age, 
+    y = gender, 
+    col = `Type of bear`)
+```
+
+
+## Extension 2: ggbeeswarm
+
+```{r, echo=FALSE}
+# to install a package, remove # and run following (you need to install a package only once), copy and paste the following code for each package
+install.packages("ggbeeswarm")
+```
+
+```{r, echo=FALSE}
+# to load a package, remove # and run following, copy and paste the following code for each package
+library(ggbeeswarm)
+```
+
+
+ggbeeswarm is a ggplot2 extension that allows for the creation of bee swarm plots. Bee swarm plots, sometimes referred to as column scatter plots or violin scatter plots, are used to plot points that would normally overlap so that they fall next to each other instead. This way, our plots become less congested and easier to read. Bee swarm plots also help to visualize the density of the data at each point. This creates clusters of points rather than having them spread all across the plot. 
+
+
+```{r, eval=FALSE, echo=FALSE}
+# use this code chunk for your own practice, make as many copies as you want
+# note that the code and outputs from this chunk are set as not to be displayed in your final report
+
+ggplot(captivebearAttacks,aes(`Type of bear`, age)) + geom_quasirandom()
+
+ggplot(captivebearAttacks,aes(gender, age)) + geom_quasirandom()
+
+```
+
+
+```{r}
+
+ggplot(captivebearAttacks, # specify what dataset you are using
+       aes(gender,age))+ # specify your x and y axes
+  geom_quasirandom() + # apply the "quasirandom"/beeswarm plot code
+         ggtitle("Captive Bear Attack Victim Demographics") # title your visual
+
+```
+
+#### Practice Exercise 2
+
+
+Create a bee swarm plot displaying the trend between `Type of bear` and victim age. Make it so that each "bee swarm" is a different color.
+
+
+```{r, eval=FALSE, echo=FALSE}
+# use this code chunk to write the solution for your practice exercise
+
+ggplot(bearAttacksna,aes(`Type of bear`, age, color = `Type of bear`)) + geom_quasirandom() 
+```
+
+## Conclusion
+
+
+This exploration process was honestly very difficult. I explored many datasets  yet couldn't really find one that had everything I needed. I was looking for a dataset that had a good mix of both numerical and categorical variables, however, I didn't have much luck. Along with this, my dataset had missing values, so that was another thing that I had to navigate as well. I ended up having to make a smaller set of the data where these values were omitted. However, I still had a bit of trouble with my Bear Attacks data as there were 2 values (male and female) that kept being outliers no matter how I tried to omit them. Due to this, I had to limit my data even further to just captive bear attacks rather than wild. While I had originally planned to use the ggblanket and ggrepel extensions for this project, I ended up having to pass on using ggrepel. This was mainly due to the lack of sufficient variables that I had available in my dataset as well as the confusing help page provided for me. Overall, I learned that sometimes your datasets limit what you can do to analyze them and you often need to go through trial and error to find out what will work best.  
+
