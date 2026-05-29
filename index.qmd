@@ -10,7 +10,7 @@ about:
     - icon: envelope
       href: mailto:henzel@lawrence.edu
     - icon: github
-      href: https://github.com/Laura-Henze
+      href: https://github.com/Laura-Henze/Laura-Henze.github.io
 ---
 :::{#intro-heading}
 ## About Me!
