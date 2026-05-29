@@ -1,0 +1,66 @@
+---
+title: "Research & Experience"
+---
+
+## Analytical Chemistry Experience
+
+One of the most influential courses in my academic experience has been analytical chemistry. Through extensive laboratory work, I developed strong attention to detail, quantitative reasoning skills, and precise laboratory techniques. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting experiments, and reproducible scientific methodology.
+
+This course strengthened my interest in scientific research and reinforced my appreciation for careful, data-driven laboratory work.
+
+### Skills Developed
+- Quantitative laboratory analysis
+- Scientific documentation
+- Precision measurement techniques
+- Experimental troubleshooting
+- Reproducible scientific workflows
+
+---
+
+## Data Science Experience
+
+Through my coursework and research experiences at Lawrence University, I discovered my interest in data science and computational analysis. What began as a useful skill for processing scientific data quickly became one of my favorite parts of research.
+
+I particularly enjoy:
+- Creating informative visualizations
+- Cleaning and organizing datasets
+- Producing reproducible workflows
+- Combining computational tools with scientific research
+- Communicating technical results clearly
+
+### Technical Skills
+- R Programming
+- SQL
+- Quarto
+- GitHub
+- Data Visualization
+- Statistical Analysis
+- Text Analysis
+
+---
+
+## Research & Scientific Communication
+
+I have also worked extensively on scientific literature interpretation and presentation development related to molecular biology and biochemistry topics.
+
+These experiences helped me develop:
+- Scientific communication skills
+- Figure interpretation abilities
+- Presentation design experience
+- Critical analysis of scientific literature
+- Collaboration and teamwork skills
+
+---
+
+## Athletics & Leadership
+
+Outside of academics, I compete on the Lawrence University Cross Country and Track & Field teams. Athletics has taught me discipline, time management, teamwork, and perseverance — skills that have also strengthened my academic and research work.
+
+Balancing athletics with STEM coursework has helped me become highly organized and adaptable in fast-paced environments.
+
+---
+
+## Future Goals
+
+In the future, I hope to pursue graduate study in forensic science with a specialization in forensic toxicology. I am especially interested in combining analytical chemistry techniques with computational analysis to support scientific investigation and research.
+```

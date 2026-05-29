@@ -1,23 +1,310 @@
 [
   {
+    "objectID": "pristineR.html",
+    "href": "pristineR.html",
+    "title": "Full README",
+    "section": "",
+    "text": "pristineR is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.\nThe package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.\nThis project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration."
+  },
+  {
+    "objectID": "pristineR.html#project-overview",
+    "href": "pristineR.html#project-overview",
+    "title": "Full README",
+    "section": "",
+    "text": "pristineR is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.\nThe package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.\nThis project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration."
+  },
+  {
+    "objectID": "pristineR.html#motivation",
+    "href": "pristineR.html#motivation",
+    "title": "Full README",
+    "section": "Motivation",
+    "text": "Motivation\nMany datasets require extensive cleaning before analysis can begin. I created pristineR to streamline repetitive preprocessing tasks into lightweight helper functions that are easy to use and designed to fail safely when invalid inputs are encountered.\nThis project also gave me experience thinking about usability and documentation from the perspective of future users."
+  },
+  {
+    "objectID": "pristineR.html#why-pristiner",
+    "href": "pristineR.html#why-pristiner",
+    "title": "Full README",
+    "section": "Why pristineR?",
+    "text": "Why pristineR?\nMany real-world datasets contain inconsistent date formats, messy column names, and missing values that require repetitive cleaning before analysis can begin.\npristineR was created to simplify these common preprocessing tasks through lightweight helper functions that are easy to use, well documented, and designed to fail safely when given invalid inputs."
+  },
+  {
+    "objectID": "pristineR.html#installation",
+    "href": "pristineR.html#installation",
+    "title": "Full README",
+    "section": "Installation",
+    "text": "Installation\nYou can install the development version of pristineR from GitHub with:\n# install.packages(\"remotes\")\n# install.packages(\"devtools\")\ndevtools::install_github(\"ADC-405-S26/pristineR\")"
+  },
+  {
+    "objectID": "pristineR.html#load-the-package",
+    "href": "pristineR.html#load-the-package",
+    "title": "Full README",
+    "section": "Load the Package",
+    "text": "Load the Package\nlibrary(pristineR)"
+  },
+  {
+    "objectID": "pristineR.html#example-dataset",
+    "href": "pristineR.html#example-dataset",
+    "title": "Full README",
+    "section": "Example Dataset",
+    "text": "Example Dataset\nThe package contains an example dataset called messy_survey.\nThe dataset intentionally contains inconsistent column names, mixed date formats, and missing values."
+  },
+  {
+    "objectID": "pristineR.html#clean-column-names",
+    "href": "pristineR.html#clean-column-names",
+    "title": "Full README",
+    "section": "Clean Column Names",
+    "text": "Clean Column Names\nDatasets imported from spreadsheets or surveys often contain spaces, punctuation, or inconsistent capitalization in column names.\nThe clean_names() function converts messy column names into snake_case format.\nnames(messy_survey)\n\ncleaned_data &lt;- clean_names(messy_survey)\n\nnames(cleaned_data)"
+  },
+  {
+    "objectID": "pristineR.html#parse-dates",
+    "href": "pristineR.html#parse-dates",
+    "title": "Full README",
+    "section": "Parse Dates",
+    "text": "Parse Dates\nDatasets frequently contain dates stored in multiple formats.\nThe safe_date_parse() function safely converts these values into standard Date objects.\ncleaned_data$submission_date &lt;-\n  safe_date_parse(cleaned_data$submission_date)\n\ncleaned_data"
+  },
+  {
+    "objectID": "pristineR.html#handling-invalid-dates",
+    "href": "pristineR.html#handling-invalid-dates",
+    "title": "Full README",
+    "section": "Handling Invalid Dates",
+    "text": "Handling Invalid Dates\nIf a date cannot be parsed, safe_date_parse() returns NA and produces a warning message instead of stopping execution completely.\nsafe_date_parse(c(\"2024-01-01\", \"bad-date\"))"
+  },
+  {
+    "objectID": "pristineR.html#generate-summary-statistics",
+    "href": "pristineR.html#generate-summary-statistics",
+    "title": "Full README",
+    "section": "Generate Summary Statistics",
+    "text": "Generate Summary Statistics\nThe quick_summary() function generates common summary statistics for selected numeric columns.\nquick_summary(\n  cleaned_data,\n  c(\"exam_score\")\n)\nThe summary includes: - mean, - standard deviation, - minimum, - maximum, - and missing value counts."
+  },
+  {
+    "objectID": "pristineR.html#function-parameters",
+    "href": "pristineR.html#function-parameters",
+    "title": "Full README",
+    "section": "Function Parameters",
+    "text": "Function Parameters\n\nsafe_date_parse(x)\n\nx: a character vector containing date values\n\n\n\nquick_summary(data, columns)\n\ndata: a data frame\ncolumns: character vector of numeric columns to summarize\n\n\n\nclean_names(data)\n\ndata: a data frame with column names to clean"
+  },
+  {
+    "objectID": "pristineR.html#additional-example",
+    "href": "pristineR.html#additional-example",
+    "title": "Full README",
+    "section": "Additional Example",
+    "text": "Additional Example\npristineR can also be used with other messy datasets.\nexample_data &lt;- data.frame(\n  \"Customer Name\" = c(\"Alice\", \"Bob\"),\n  \"Purchase.Date\" = c(\"2024-01-01\", \"01/15/2024\"),\n  \"Total Sales $\" = c(120, 95)\n)\n\nexample_data &lt;- clean_names(example_data)\n\nexample_data$purchase_date &lt;-\n  safe_date_parse(example_data$purchase_date)\n\nexample_data"
+  },
+  {
+    "objectID": "pristineR.html#package-functions",
+    "href": "pristineR.html#package-functions",
+    "title": "Full README",
+    "section": "Package Functions",
+    "text": "Package Functions\npristineR currently includes: - safe_date_parse() - quick_summary() - clean_names()"
+  },
+  {
+    "objectID": "pristineR.html#skills-developed",
+    "href": "pristineR.html#skills-developed",
+    "title": "Full README",
+    "section": "Skills Developed",
+    "text": "Skills Developed\nThrough this project, I gained experience with: - R package development - Documentation writing - GitHub workflows - Reproducible analysis - Data cleaning pipelines - Error handling - User-centered function design"
+  },
+  {
+    "objectID": "pristineR.html#revisions-after-feedback",
+    "href": "pristineR.html#revisions-after-feedback",
+    "title": "Full README",
+    "section": "Revisions After Feedback",
+    "text": "Revisions After Feedback\nFollowing peer review and instructor feedback, I expanded the project documentation to include: - clearer explanations of when and why to use each function, - additional edge case examples, - more detailed workflow demonstrations, - and improved descriptions throughout the README and vignette.\nThese revisions made the package easier to understand and more useful for future users."
+  },
+  {
+    "objectID": "pristineR.html#github-repository",
+    "href": "pristineR.html#github-repository",
+    "title": "Full README",
+    "section": "GitHub Repository",
+    "text": "GitHub Repository\nView the pristineR repository ````"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University in the Biochemistry, Data Science, and Anthropology departments. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School where I gained my love for science. In the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something that I didn’t know about, but seemed like a handy skill to have. With this, I discovered my enjoyment of data science and producing informative figures for my technical lab reports.\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young and I’m very greatful to represent my team here. In addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time)."
+    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University studying Biochemistry, Data Science, and Anthropology. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School, where I first developed my love for science.\nIn the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology. My academic interests combine laboratory science, analytical chemistry, and computational analysis.\nOne of my favorite courses at Lawrence has been analytical chemistry, where I developed strong laboratory skills and gained experience with precise quantitative techniques and scientific methodology. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting, and reproducible scientific work.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something I hadn’t previously considered, but quickly realized was an incredibly valuable skill to have. With this, I discovered my enjoyment of data science, creating informative figures, and using computational analysis to support technical lab reports and scientific communication.\n\n\n\nBiochemistry\nAnalytical Chemistry\nForensic Toxicology\nScientific Research\nData Science\nData Visualization\n\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young, and I’m very grateful to represent my team here.\nIn addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).\n```"
   },
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
     "title": "Home",
     "section": "",
-    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University in the Biochemistry, Data Science, and Anthropology departments. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School where I gained my love for science. In the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something that I didn’t know about, but seemed like a handy skill to have. With this, I discovered my enjoyment of data science and producing informative figures for my technical lab reports.\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young and I’m very greatful to represent my team here. In addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time)."
+    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University studying Biochemistry, Data Science, and Anthropology. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School, where I first developed my love for science.\nIn the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology. My academic interests combine laboratory science, analytical chemistry, and computational analysis.\nOne of my favorite courses at Lawrence has been analytical chemistry, where I developed strong laboratory skills and gained experience with precise quantitative techniques and scientific methodology. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting, and reproducible scientific work.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something I hadn’t previously considered, but quickly realized was an incredibly valuable skill to have. With this, I discovered my enjoyment of data science, creating informative figures, and using computational analysis to support technical lab reports and scientific communication.\n\n\n\nBiochemistry\nAnalytical Chemistry\nForensic Toxicology\nScientific Research\nData Science\nData Visualization\n\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young, and I’m very grateful to represent my team here.\nIn addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).\n```"
+  },
+  {
+    "objectID": "experience.html",
+    "href": "experience.html",
+    "title": "Research & Experience",
+    "section": "",
+    "text": "One of the most influential courses in my academic experience has been analytical chemistry. Through extensive laboratory work, I developed strong attention to detail, quantitative reasoning skills, and precise laboratory techniques. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting experiments, and reproducible scientific methodology.\nThis course strengthened my interest in scientific research and reinforced my appreciation for careful, data-driven laboratory work.\n\n\n\nQuantitative laboratory analysis\nScientific documentation\nPrecision measurement techniques\nExperimental troubleshooting\nReproducible scientific workflows"
+  },
+  {
+    "objectID": "experience.html#analytical-chemistry-experience",
+    "href": "experience.html#analytical-chemistry-experience",
+    "title": "Research & Experience",
+    "section": "",
+    "text": "One of the most influential courses in my academic experience has been analytical chemistry. Through extensive laboratory work, I developed strong attention to detail, quantitative reasoning skills, and precise laboratory techniques. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting experiments, and reproducible scientific methodology.\nThis course strengthened my interest in scientific research and reinforced my appreciation for careful, data-driven laboratory work.\n\n\n\nQuantitative laboratory analysis\nScientific documentation\nPrecision measurement techniques\nExperimental troubleshooting\nReproducible scientific workflows"
+  },
+  {
+    "objectID": "experience.html#data-science-experience",
+    "href": "experience.html#data-science-experience",
+    "title": "Research & Experience",
+    "section": "Data Science Experience",
+    "text": "Data Science Experience\nThrough my coursework and research experiences at Lawrence University, I discovered my interest in data science and computational analysis. What began as a useful skill for processing scientific data quickly became one of my favorite parts of research.\nI particularly enjoy: - Creating informative visualizations - Cleaning and organizing datasets - Producing reproducible workflows - Combining computational tools with scientific research - Communicating technical results clearly\n\nTechnical Skills\n\nR Programming\nSQL\nQuarto\nGitHub\nData Visualization\nStatistical Analysis\nText Analysis"
+  },
+  {
+    "objectID": "experience.html#research-scientific-communication",
+    "href": "experience.html#research-scientific-communication",
+    "title": "Research & Experience",
+    "section": "Research & Scientific Communication",
+    "text": "Research & Scientific Communication\nI have also worked extensively on scientific literature interpretation and presentation development related to molecular biology and biochemistry topics.\nThese experiences helped me develop: - Scientific communication skills - Figure interpretation abilities - Presentation design experience - Critical analysis of scientific literature - Collaboration and teamwork skills"
+  },
+  {
+    "objectID": "experience.html#athletics-leadership",
+    "href": "experience.html#athletics-leadership",
+    "title": "Research & Experience",
+    "section": "Athletics & Leadership",
+    "text": "Athletics & Leadership\nOutside of academics, I compete on the Lawrence University Cross Country and Track & Field teams. Athletics has taught me discipline, time management, teamwork, and perseverance — skills that have also strengthened my academic and research work.\nBalancing athletics with STEM coursework has helped me become highly organized and adaptable in fast-paced environments."
+  },
+  {
+    "objectID": "experience.html#future-goals",
+    "href": "experience.html#future-goals",
+    "title": "Research & Experience",
+    "section": "Future Goals",
+    "text": "Future Goals\nIn the future, I hope to pursue graduate study in forensic science with a specialization in forensic toxicology. I am especially interested in combining analytical chemistry techniques with computational analysis to support scientific investigation and research. ```"
   },
   {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "ggblanket and ggbeeswarm: An Overview\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "This page highlights projects involving data science, scientific communication, programming, and computational analysis.\nThroughout these projects, I developed experience with: - R programming - Data visualization - Statistical analysis - SQL - Text analysis - Scientific communication - GitHub workflows - Reproducible research practices"
+  },
+  {
+    "objectID": "projects.html#featured-projects",
+    "href": "projects.html#featured-projects",
+    "title": "Projects",
+    "section": "Featured Projects",
+    "text": "Featured Projects\n\npristineR Package\nAn R package designed to simplify common data-cleaning and summarization tasks through user-friendly helper functions.\nSkills emphasized: - R package development - Documentation - Data cleaning pipelines - Error handling - GitHub collaboration\n\n\n\nSQL Project\nA project focused on querying and analyzing structured datasets using SQL.\nSkills emphasized: - Database querying - Data organization - Relational databases - Data interpretation\n\n\n\nText Analysis Project\nA computational text analysis project involving pattern recognition and visualization of textual datasets.\nSkills emphasized: - Text mining - Natural language processing - Data visualization - Statistical analysis\n\n\n\nPoster Project\nA scientific communication project focused on presenting technical material clearly and effectively through visual design.\nSkills emphasized: - Scientific communication - Figure design - Data presentation - Visual storytelling\n\n\n\nResearch Beyond Class\nAdditional scientific and research experiences outside of coursework, including literature interpretation and presentation development.\nSkills emphasized: - Research analysis - Scientific literature review - Presentation design - Biochemistry communication ```"
+  },
+  {
+    "objectID": "projects/pristineR.html",
+    "href": "projects/pristineR.html",
+    "title": "pristineR Package",
+    "section": "",
+    "text": "pristineR is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.\nThe package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.\nThis project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration.\n\n\n\n\nMany datasets require extensive cleaning before analysis can begin. I created pristineR to streamline repetitive preprocessing tasks into lightweight helper functions that are easy to use and designed to fail safely when invalid inputs are encountered.\nThis project also gave me experience thinking about usability and documentation from the perspective of future users."
+  },
+  {
+    "objectID": "projects/pristineR.html#project-overview",
+    "href": "projects/pristineR.html#project-overview",
+    "title": "pristineR Package",
+    "section": "",
+    "text": "pristineR is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.\nThe package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.\nThis project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration."
+  },
+  {
+    "objectID": "projects/pristineR.html#motivation",
+    "href": "projects/pristineR.html#motivation",
+    "title": "pristineR Package",
+    "section": "",
+    "text": "Many datasets require extensive cleaning before analysis can begin. I created pristineR to streamline repetitive preprocessing tasks into lightweight helper functions that are easy to use and designed to fail safely when invalid inputs are encountered.\nThis project also gave me experience thinking about usability and documentation from the perspective of future users."
+  },
+  {
+    "objectID": "projects/pristineR.html#why-pristiner",
+    "href": "projects/pristineR.html#why-pristiner",
+    "title": "pristineR Package",
+    "section": "Why pristineR?",
+    "text": "Why pristineR?\nMany real-world datasets contain inconsistent date formats, messy column names, and missing values that require repetitive cleaning before analysis can begin.\npristineR was created to simplify these common preprocessing tasks through lightweight helper functions that are easy to use, well documented, and designed to fail safely when given invalid inputs."
+  },
+  {
+    "objectID": "projects/pristineR.html#installation",
+    "href": "projects/pristineR.html#installation",
+    "title": "pristineR Package",
+    "section": "Installation",
+    "text": "Installation\nYou can install the development version of pristineR from GitHub with:\n# install.packages(\"remotes\")\n# install.packages(\"devtools\")\ndevtools::install_github(\"ADC-405-S26/pristineR\")"
+  },
+  {
+    "objectID": "projects/pristineR.html#load-the-package",
+    "href": "projects/pristineR.html#load-the-package",
+    "title": "pristineR Package",
+    "section": "Load the Package",
+    "text": "Load the Package\nlibrary(pristineR)"
+  },
+  {
+    "objectID": "projects/pristineR.html#example-dataset",
+    "href": "projects/pristineR.html#example-dataset",
+    "title": "pristineR Package",
+    "section": "Example Dataset",
+    "text": "Example Dataset\nThe package contains an example dataset called messy_survey.\nThe dataset intentionally contains inconsistent column names, mixed date formats, and missing values."
+  },
+  {
+    "objectID": "projects/pristineR.html#clean-column-names",
+    "href": "projects/pristineR.html#clean-column-names",
+    "title": "pristineR Package",
+    "section": "Clean Column Names",
+    "text": "Clean Column Names\nDatasets imported from spreadsheets or surveys often contain spaces, punctuation, or inconsistent capitalization in column names.\nThe clean_names() function converts messy column names into snake_case format.\nnames(messy_survey)\n\ncleaned_data &lt;- clean_names(messy_survey)\n\nnames(cleaned_data)"
+  },
+  {
+    "objectID": "projects/pristineR.html#parse-dates",
+    "href": "projects/pristineR.html#parse-dates",
+    "title": "pristineR Package",
+    "section": "Parse Dates",
+    "text": "Parse Dates\nDatasets frequently contain dates stored in multiple formats.\nThe safe_date_parse() function safely converts these values into standard Date objects.\ncleaned_data$submission_date &lt;-\n  safe_date_parse(cleaned_data$submission_date)\n\ncleaned_data"
+  },
+  {
+    "objectID": "projects/pristineR.html#handling-invalid-dates",
+    "href": "projects/pristineR.html#handling-invalid-dates",
+    "title": "pristineR Package",
+    "section": "Handling Invalid Dates",
+    "text": "Handling Invalid Dates\nIf a date cannot be parsed, safe_date_parse() returns NA and produces a warning message instead of stopping execution completely.\nsafe_date_parse(c(\"2024-01-01\", \"bad-date\"))"
+  },
+  {
+    "objectID": "projects/pristineR.html#generate-summary-statistics",
+    "href": "projects/pristineR.html#generate-summary-statistics",
+    "title": "pristineR Package",
+    "section": "Generate Summary Statistics",
+    "text": "Generate Summary Statistics\nThe quick_summary() function generates common summary statistics for selected numeric columns.\nquick_summary(\n  cleaned_data,\n  c(\"exam_score\")\n)\nThe summary includes: - mean, - standard deviation, - minimum, - maximum, - and missing value counts."
+  },
+  {
+    "objectID": "projects/pristineR.html#function-parameters",
+    "href": "projects/pristineR.html#function-parameters",
+    "title": "pristineR Package",
+    "section": "Function Parameters",
+    "text": "Function Parameters\n\nsafe_date_parse(x)\n\nx: a character vector containing date values\n\n\n\nquick_summary(data, columns)\n\ndata: a data frame\ncolumns: character vector of numeric columns to summarize\n\n\n\nclean_names(data)\n\ndata: a data frame with column names to clean"
+  },
+  {
+    "objectID": "projects/pristineR.html#additional-example",
+    "href": "projects/pristineR.html#additional-example",
+    "title": "pristineR Package",
+    "section": "Additional Example",
+    "text": "Additional Example\npristineR can also be used with other messy datasets.\nexample_data &lt;- data.frame(\n  \"Customer Name\" = c(\"Alice\", \"Bob\"),\n  \"Purchase.Date\" = c(\"2024-01-01\", \"01/15/2024\"),\n  \"Total Sales $\" = c(120, 95)\n)\n\nexample_data &lt;- clean_names(example_data)\n\nexample_data$purchase_date &lt;-\n  safe_date_parse(example_data$purchase_date)\n\nexample_data"
+  },
+  {
+    "objectID": "projects/pristineR.html#package-functions",
+    "href": "projects/pristineR.html#package-functions",
+    "title": "pristineR Package",
+    "section": "Package Functions",
+    "text": "Package Functions\npristineR currently includes: - safe_date_parse() - quick_summary() - clean_names()"
+  },
+  {
+    "objectID": "projects/pristineR.html#skills-developed",
+    "href": "projects/pristineR.html#skills-developed",
+    "title": "pristineR Package",
+    "section": "Skills Developed",
+    "text": "Skills Developed\nThrough this project, I gained experience with: - R package development - Documentation writing - GitHub workflows - Reproducible analysis - Data cleaning pipelines - Error handling - User-centered function design"
+  },
+  {
+    "objectID": "projects/pristineR.html#revisions-after-feedback",
+    "href": "projects/pristineR.html#revisions-after-feedback",
+    "title": "pristineR Package",
+    "section": "Revisions After Feedback",
+    "text": "Revisions After Feedback\nFollowing peer review and instructor feedback, I expanded the project documentation to include: - clearer explanations of when and why to use each function, - additional edge case examples, - more detailed workflow demonstrations, - and improved descriptions throughout the README and vignette.\nThese revisions made the package easier to understand and more useful for future users."
+  },
+  {
+    "objectID": "projects/pristineR.html#github-repository",
+    "href": "projects/pristineR.html#github-repository",
+    "title": "pristineR Package",
+    "section": "GitHub Repository",
+    "text": "GitHub Repository\nView the pristineR repository ````"
   }
 ]

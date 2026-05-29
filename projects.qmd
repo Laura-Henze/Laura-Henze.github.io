@@ -1,7 +1,80 @@
 ---
 title: "Projects"
-format: html
-listing:
-  contents: projects
 ---
+
+This page highlights projects involving data science, scientific communication, programming, and computational analysis.
+
+Throughout these projects, I developed experience with:
+- R programming
+- Data visualization
+- Statistical analysis
+- SQL
+- Text analysis
+- Scientific communication
+- GitHub workflows
+- Reproducible research practices
+
+---
+
+## Featured Projects
+
+### [pristineR Package](projects/pristineR.qmd)
+
+An R package designed to simplify common data-cleaning and summarization tasks through user-friendly helper functions.
+
+Skills emphasized:
+- R package development
+- Documentation
+- Data cleaning pipelines
+- Error handling
+- GitHub collaboration
+
+---
+
+### [SQL Project](projects/sql_project.qmd)
+
+A project focused on querying and analyzing structured datasets using SQL.
+
+Skills emphasized:
+- Database querying
+- Data organization
+- Relational databases
+- Data interpretation
+
+---
+
+### [Text Analysis Project](projects/text_analysis.qmd)
+
+A computational text analysis project involving pattern recognition and visualization of textual datasets.
+
+Skills emphasized:
+- Text mining
+- Natural language processing
+- Data visualization
+- Statistical analysis
+
+---
+
+### [Poster Project](projects/poster_project.qmd)
+
+A scientific communication project focused on presenting technical material clearly and effectively through visual design.
+
+Skills emphasized:
+- Scientific communication
+- Figure design
+- Data presentation
+- Visual storytelling
+
+---
+
+### [Research Beyond Class](projects/research.qmd)
+
+Additional scientific and research experiences outside of coursework, including literature interpretation and presentation development.
+
+Skills emphasized:
+- Research analysis
+- Scientific literature review
+- Presentation design
+- Biochemistry communication
+```
 

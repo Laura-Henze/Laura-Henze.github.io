@@ -1,21 +1,55 @@
-project:
-  type: website
-  output-dir: docs
+project: 
+  type: website 
+  output-dir: docs 
+  render: 
+  - "*.qmd" 
+  - "projects/*.qmd"
 
 website:
   title: "Laura Henze"
+
   navbar:
     left:
       - href: index.qmd
         text: Home
-      # - href: about.qmd
-      #   text: About
-      - href: projects.qmd
-        text: Projects
+
+      - text: Projects
+        menu:
+          - href: projects.qmd
+            text: All Projects
+
+          - href: projects/pristineR.qmd
+            text: pristineR Package
+
+          - href: projects/sql_project.qmd
+            text: SQL Project
+
+          - href: projects/text_analysis.qmd
+            text: Text Analysis Project
+            
+          - href: projects/poster_project.qmd
+            text: Poster Project
+            
+          - href: projects/research.qmd
+            text: Research Beyond Class
+
+      - href: experience.qmd
+        text: Research & Experience
+
+      - href: resume.qmd
+        text: Resume
+
+    right:
+      - icon: github
+        href: https://github.com/Laura-Henze/Laura-Henze.github.io
+
+      - icon: envelope
+        href: mailto:henzel@lawrence.edu
 
 format:
   html:
-    theme: [yeti, theme.scss]
+    theme: lux
     css: styles.css
     toc: true
+
 

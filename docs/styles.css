@@ -1,1 +1,90 @@
-/* css styles */
+```css
+/* =========================
+   BASE SITE STYLING
+   ========================= */
+
+body {
+  font-size: 18px;
+  background: linear-gradient(135deg, #f5edff 0%, #efe3ff 35%, #e3d1ff 100%);
+  color: #2d1b45;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #5b2c87;
+  font-weight: 700;
+  text-shadow: 0px 2px 8px rgba(123, 44, 191, 0.15);
+}
+
+/* Links */
+a {
+  color: #7b2cbf;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #9d4edd;
+}
+
+/* Images */
+img {
+  border-radius: 18px;
+  box-shadow: 0px 6px 18px rgba(75, 31, 115, 0.25);
+}
+
+/* Project cards */
+.project-card {
+  padding: 24px;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 8px 24px rgba(75, 31, 115, 0.15);
+  margin-bottom: 24px;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #c77dff, #7b2cbf);
+  margin: 30px 0;
+}
+
+/* =========================
+   NAVBAR + DROPDOWN FIX
+   ========================= */
+
+/* Navbar text */
+.navbar a,
+.navbar-brand {
+  color: #7b2cbf !important;
+  font-weight: 600;
+}
+
+/* Dropdown menu background */
+.dropdown-menu {
+  background-color: #f3e8ff;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Dropdown items (Projects links) */
+.dropdown-item {
+  color: #2b0a3d !important;
+  font-weight: 600;
+}
+
+/* Dropdown hover */
+.dropdown-item:hover {
+  background-color: #d8b4ff;
+  color: #1a0826 !important;
+}
+
+/* Lists spacing */
+ul li {
+  margin-bottom: 8px;
+}
+```
