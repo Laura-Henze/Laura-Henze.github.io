@@ -25,6 +25,7 @@ One of my favorite courses at Lawrence has been analytical chemistry, where I de
 Through my explorations of research at Lawrence, I came to discover that data processing was something I hadn't previously considered, but quickly realized was an incredibly valuable skill to have. With this, I discovered my enjoyment of data science, creating informative figures, and using computational analysis to support technical lab reports and scientific communication.
 
 ### Academic Interests
+
 - Biochemistry
 - Analytical Chemistry
 - Forensic Toxicology
@@ -35,6 +36,4 @@ Through my explorations of research at Lawrence, I came to discover that data pr
 In addition to my academics, I compete on the Lawrence [Cross Country](https://vikings.lawrence.edu/sports/wcross) and [Track and Field](https://vikings.lawrence.edu/sports/wcross) teams in my extra time. Running has continued to be one of my passions since I was young, and I'm very grateful to represent my team here.
 
 In addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).
-
-```
 

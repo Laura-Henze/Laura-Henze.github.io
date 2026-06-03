@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>pristiner – Laura Henze</title>
+<title>pristineR Package – Laura Henze</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -139,16 +139,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">All Projects</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../projects/pristineR.html">
- <span class="dropdown-text">pristineR Package</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="../projects/sql_project.html">
  <span class="dropdown-text">SQL Project</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../projects/text_analysis.html">
  <span class="dropdown-text">Text Analysis Project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../projects/pristineR.html">
+ <span class="dropdown-text">pristineR Package</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../projects/poster_project.html">
@@ -213,22 +213,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#additional-example" id="toc-additional-example" class="nav-link" data-scroll-target="#additional-example">Additional Example</a></li>
   <li><a href="#package-functions" id="toc-package-functions" class="nav-link" data-scroll-target="#package-functions">Package Functions</a></li>
   <li><a href="#skills-developed" id="toc-skills-developed" class="nav-link" data-scroll-target="#skills-developed">Skills Developed</a></li>
-  <li><a href="#revisions-after-feedback" id="toc-revisions-after-feedback" class="nav-link" data-scroll-target="#revisions-after-feedback">Revisions After Feedback</a></li>
   <li><a href="#github-repository" id="toc-github-repository" class="nav-link" data-scroll-target="#github-repository">GitHub Repository</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">pristineR Package</h1>
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="project-overview" class="level2">
 <h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
 <p><code>pristineR</code> is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.</p>
-<p>The package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.</p>
+<p>The package focuses on preprocessing issues commonly encountered in real-world datasets, including:</p>
+<ul>
+<li>inconsistent date formats</li>
+<li>messy column names</li>
+<li>and missing values</li>
+</ul>
 <p>This project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration.</p>
 <hr>
 </section>
@@ -300,7 +320,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  cleaned_data,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"exam_score"</span>)</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The summary includes: - mean, - standard deviation, - minimum, - maximum, - and missing value counts.</p>
+<p>The summary includes:</p>
+<ul>
+<li>mean</li>
+<li>standard deviation</li>
+<li>minimum</li>
+<li>maximum</li>
+<li>missing value counts</li>
+</ul>
 <hr>
 </section>
 <section id="function-parameters" class="level2">
@@ -341,27 +368,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">safe_date_parse</span>(example_data<span class="sc">$</span>purchase_date)</span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>example_data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
 </section>
 <section id="package-functions" class="level2">
 <h2 class="anchored" data-anchor-id="package-functions">Package Functions</h2>
-<p><code>pristineR</code> currently includes: - <code>safe_date_parse()</code> - <code>quick_summary()</code> - <code>clean_names()</code></p>
+<p><code>pristineR</code> currently includes:</p>
+<ul>
+<li><code>safe_date_parse()</code></li>
+<li><code>quick_summary()</code></li>
+<li><code>clean_names()</code></li>
+</ul>
 <hr>
 </section>
 <section id="skills-developed" class="level2">
 <h2 class="anchored" data-anchor-id="skills-developed">Skills Developed</h2>
-<p>Through this project, I gained experience with: - R package development - Documentation writing - GitHub workflows - Reproducible analysis - Data cleaning pipelines - Error handling - User-centered function design</p>
-<hr>
-</section>
-<section id="revisions-after-feedback" class="level2">
-<h2 class="anchored" data-anchor-id="revisions-after-feedback">Revisions After Feedback</h2>
-<p>Following peer review and instructor feedback, I expanded the project documentation to include: - clearer explanations of when and why to use each function, - additional edge case examples, - more detailed workflow demonstrations, - and improved descriptions throughout the README and vignette.</p>
-<p>These revisions made the package easier to understand and more useful for future users.</p>
+<p>Through this project, I gained experience with:</p>
+<ul>
+<li>R package development</li>
+<li>Documentation writing</li>
+<li>GitHub workflows</li>
+<li>Reproducible analysis</li>
+<li>Data cleaning pipelines</li>
+<li>Error handling</li>
+<li>User-centered function design</li>
+</ul>
 <hr>
 </section>
 <section id="github-repository" class="level2">
 <h2 class="anchored" data-anchor-id="github-repository">GitHub Repository</h2>
-<p><a href="https://github.com/ADC-405-S26/pristineR">View the pristineR repository</a> ````</p>
+<p><a href="https://github.com/ADC-405-S26/pristineR">View the pristineR repository</a></p>
 
 
 </section>

@@ -18,14 +18,14 @@ website:
           - href: projects.qmd
             text: All Projects
 
-          - href: projects/pristineR.qmd
-            text: pristineR Package
-
           - href: projects/sql_project.qmd
             text: SQL Project
 
           - href: projects/text_analysis.qmd
             text: Text Analysis Project
+            
+          - href: projects/pristineR.qmd
+            text: pristineR Package
             
           - href: projects/poster_project.qmd
             text: Poster Project

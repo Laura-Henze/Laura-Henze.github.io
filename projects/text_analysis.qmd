@@ -194,6 +194,9 @@ The project strengthened my skills in data wrangling, visualization, natural lan
 ## Full Report
 
 [View Full Project Report](ted_talk_text_analysis.pdf)
+
+[View GitHub Repository](https://github.com/ADC-405-S26/Project_3_TextAnalysis_Team_4)
+
 ---
 
 ## Data Source

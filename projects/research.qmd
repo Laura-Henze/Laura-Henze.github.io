@@ -40,3 +40,5 @@ This project strengthened my ability to work with real-world datasets and commun
 ## Full Report
 
 [View Full Project Report](project10.pdf)
+
+[View GitHub Repository](https://github.com/SDS-255-F25/Project_Team_10)

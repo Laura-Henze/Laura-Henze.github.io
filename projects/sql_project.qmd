@@ -11,6 +11,7 @@ title: ""
 In this project, we used SQL and R to analyze historical Himalayan climbing expedition data from the Himalayan Expedition Dataset. Our goal was to investigate patterns in expedition success, climber safety, participation, and staffing.
 
 The project involved:
+
 - Building a relational database
 - Importing and cleaning data
 - Writing SQL queries
@@ -122,3 +123,5 @@ This project helped me develop experience building and querying relational datab
 ## Full Report
 
 [View Full Project Report](sql_project.pdf)
+
+[View GitHub Repository](https://github.com/ADC-405-S26/Project_2_SQL_Team_4)

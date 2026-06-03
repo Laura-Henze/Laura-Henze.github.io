@@ -9,6 +9,7 @@ One of the most influential courses in my academic experience has been analytica
 This course strengthened my interest in scientific research and reinforced my appreciation for careful, data-driven laboratory work.
 
 ### Skills Developed
+
 - Quantitative laboratory analysis
 - Scientific documentation
 - Precision measurement techniques
@@ -22,6 +23,7 @@ This course strengthened my interest in scientific research and reinforced my ap
 Through my coursework and research experiences at Lawrence University, I discovered my interest in data science and computational analysis. What began as a useful skill for processing scientific data quickly became one of my favorite parts of research.
 
 I particularly enjoy:
+
 - Creating informative visualizations
 - Cleaning and organizing datasets
 - Producing reproducible workflows
@@ -29,6 +31,7 @@ I particularly enjoy:
 - Communicating technical results clearly
 
 ### Technical Skills
+
 - R Programming
 - SQL
 - Quarto
@@ -44,6 +47,7 @@ I particularly enjoy:
 I have also worked extensively on scientific literature interpretation and presentation development related to molecular biology and biochemistry topics.
 
 These experiences helped me develop:
+
 - Scientific communication skills
 - Figure interpretation abilities
 - Presentation design experience

@@ -17,3 +17,7 @@ height="900">
 ## Reflection
 
 This project helped me better understand how visualization tools are designed and why ggplot2 is structured around reusable graphical components.
+
+## Full Report
+
+[View GitHub Repository](https://github.com/ADC-405-S26/Project_5_PaperPoster_Team_4)

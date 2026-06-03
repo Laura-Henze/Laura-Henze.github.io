@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "pristineR Package"
 ---
 
 ## Project Overview
@@ -7,9 +7,10 @@ title: ""
 `pristineR` is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.
 
 The package focuses on preprocessing issues commonly encountered in real-world datasets, including:
-- inconsistent date formats,
-- messy column names,
-- and missing values.
+
+- inconsistent date formats
+- messy column names
+- and missing values
 
 This project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration.
 
@@ -116,11 +117,12 @@ quick_summary(
 ```
 
 The summary includes:
-- mean,
-- standard deviation,
-- minimum,
-- maximum,
-- and missing value counts.
+
+- mean
+- standard deviation
+- minimum
+- maximum
+- missing value counts
 
 ---
 
@@ -157,11 +159,10 @@ example_data$purchase_date <-
 example_data
 ```
 
----
-
 ## Package Functions
 
 `pristineR` currently includes:
+
 - `safe_date_parse()`
 - `quick_summary()`
 - `clean_names()`
@@ -171,6 +172,7 @@ example_data
 ## Skills Developed
 
 Through this project, I gained experience with:
+
 - R package development
 - Documentation writing
 - GitHub workflows
@@ -181,19 +183,6 @@ Through this project, I gained experience with:
 
 ---
 
-## Revisions After Feedback
-
-Following peer review and instructor feedback, I expanded the project documentation to include:
-- clearer explanations of when and why to use each function,
-- additional edge case examples,
-- more detailed workflow demonstrations,
-- and improved descriptions throughout the README and vignette.
-
-These revisions made the package easier to understand and more useful for future users.
-
----
-
 ## GitHub Repository
 
 [View the pristineR repository](https://github.com/ADC-405-S26/pristineR)
-````
