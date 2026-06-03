@@ -31,13 +31,10 @@ website:
             text: Poster Project
             
           - href: projects/research.qmd
-            text: Research Beyond Class
+            text: Additional Project
 
       - href: experience.qmd
         text: Research & Experience
-
-      - href: resume.qmd
-        text: Resume
 
     right:
       - icon: github

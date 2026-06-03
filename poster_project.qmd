@@ -1,5 +1,0 @@
----
-title: "poster_project"
-format: html
----
-

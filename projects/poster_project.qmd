@@ -1,5 +1,19 @@
 ---
-title: "poster_project"
-format: html
+title: "A Layered Grammar of Graphics"
 ---
 
+## Project Overview
+
+This poster summarizes Hadley Wickham's paper *A Layered Grammar of Graphics* and explores the theoretical foundation of ggplot2.
+
+## Poster
+
+<iframe
+src="poster.pdf"
+width="100%"
+height="900">
+</iframe>
+
+## Reflection
+
+This project helped me better understand how visualization tools are designed and why ggplot2 is structured around reusable graphical components.

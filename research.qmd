@@ -1,5 +1,42 @@
 ---
-title: "research"
-format: html
+title: "Additional Project"
 ---
 
+## Insurance Charges Analysis
+
+### Overview
+
+This project was completed as part of my Statistics for Data Science coursework and explored factors associated with individual medical insurance charges. Using a publicly available insurance dataset, I investigated how demographic and health-related variables influence healthcare costs and applied statistical and data visualization techniques to identify important patterns.
+
+### Objectives
+
+The primary goal of the project was to determine which factors were most strongly associated with insurance charges and to evaluate the relationships among variables such as age, body mass index (BMI), smoking status, number of children, sex, and geographic region.
+
+### Methods
+
+The analysis was conducted in R using data visualization and statistical modeling techniques. Exploratory data analysis was performed using ggplot2 to identify trends and potential relationships within the data. Variables were compared through summary statistics and visualizations, and regression methods were used to quantify the effects of different predictors on insurance charges.
+
+### Key Findings
+
+- Smoking status was the strongest predictor of increased insurance charges.
+- Age was positively associated with healthcare costs, with older individuals generally experiencing higher charges.
+- BMI also showed a positive relationship with charges, particularly among smokers.
+- Sex and geographic region had comparatively smaller effects on overall insurance costs.
+- Visualizations helped highlight interactions among variables and identify trends that were not immediately apparent from summary statistics alone.
+
+### Skills Developed
+
+- R Programming
+- Data Cleaning and Exploration
+- Data Visualization with ggplot2
+- Statistical Modeling
+- Regression Analysis
+- Interpretation and Communication of Results
+
+### Reflection
+
+This project strengthened my ability to work with real-world datasets and communicate statistical findings through visualizations and written analysis. It also reinforced the importance of exploratory data analysis in understanding complex relationships within data before applying formal statistical models. Through this project, I gained additional experience using R as a tool for reproducible data analysis and scientific communication.
+
+## Full Report
+
+[View Full Project Report](project10.pdf)

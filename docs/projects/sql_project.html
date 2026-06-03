@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -120,18 +155,14 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Poster Project</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../projects/research.qmd">
- <span class="dropdown-text">Research Beyond Class</span></a>
+    <a class="dropdown-item" href="../projects/research.html">
+ <span class="dropdown-text">Additional Project</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="../experience.html"> 
 <span class="menu-text">Research &amp; Experience</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../resume.qmd"> 
-<span class="menu-text">Resume</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -156,33 +187,162 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#analyzing-himalayan-climbing-expeditions-with-sql-and-r" id="toc-analyzing-himalayan-climbing-expeditions-with-sql-and-r" class="nav-link active" data-scroll-target="#analyzing-himalayan-climbing-expeditions-with-sql-and-r">Analyzing Himalayan Climbing Expeditions with SQL and R</a>
+  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a></li>
+  <li><a href="#database-design" id="toc-database-design" class="nav-link" data-scroll-target="#database-design">Database Design</a>
+  <ul class="collapse">
+  <li><a href="#members" id="toc-members" class="nav-link" data-scroll-target="#members">Members</a></li>
+  <li><a href="#expeditions" id="toc-expeditions" class="nav-link" data-scroll-target="#expeditions">Expeditions</a></li>
+  <li><a href="#peaks" id="toc-peaks" class="nav-link" data-scroll-target="#peaks">Peaks</a></li>
+  </ul></li>
+  <li><a href="#example-sql-query" id="toc-example-sql-query" class="nav-link" data-scroll-target="#example-sql-query">Example SQL Query</a></li>
+  <li><a href="#major-findings" id="toc-major-findings" class="nav-link" data-scroll-target="#major-findings">Major Findings</a>
+  <ul class="collapse">
+  <li><a href="#success-rates-increased-over-time" id="toc-success-rates-increased-over-time" class="nav-link" data-scroll-target="#success-rates-increased-over-time">Success Rates Increased Over Time</a></li>
+  <li><a href="#oxygen-use-improves-success" id="toc-oxygen-use-improves-success" class="nav-link" data-scroll-target="#oxygen-use-improves-success">Oxygen Use Improves Success</a></li>
+  <li><a href="#death-rates-have-declined" id="toc-death-rates-have-declined" class="nav-link" data-scroll-target="#death-rates-have-declined">Death Rates Have Declined</a></li>
+  <li><a href="#nepal-has-the-highest-participation" id="toc-nepal-has-the-highest-participation" class="nav-link" data-scroll-target="#nepal-has-the-highest-participation">Nepal Has the Highest Participation</a></li>
+  </ul></li>
+  <li><a href="#example-visualization" id="toc-example-visualization" class="nav-link" data-scroll-target="#example-visualization">Example Visualization</a></li>
+  <li><a href="#skills-developed" id="toc-skills-developed" class="nav-link" data-scroll-target="#skills-developed">Skills Developed</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#full-report" id="toc-full-report" class="nav-link" data-scroll-target="#full-report">Full Report</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">sql_project</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
+<section id="analyzing-himalayan-climbing-expeditions-with-sql-and-r" class="level1">
+<h1>Analyzing Himalayan Climbing Expeditions with SQL and R</h1>
+<p><strong>Group Members:</strong> Laura Henze and Tristan Zook</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>In this project, we used SQL and R to analyze historical Himalayan climbing expedition data from the Himalayan Expedition Dataset. Our goal was to investigate patterns in expedition success, climber safety, participation, and staffing.</p>
+<p>The project involved: - Building a relational database - Importing and cleaning data - Writing SQL queries - Visualizing results in R - Interpreting expedition trends</p>
+</section>
+<section id="datasets" class="level2">
+<h2 class="anchored" data-anchor-id="datasets">Datasets</h2>
+<p>We worked with three datasets:</p>
+<ul>
+<li><code>members</code></li>
+<li><code>expeditions</code></li>
+<li><code>peaks</code></li>
+</ul>
+<p>These datasets were imported into a DuckDB database and linked using expedition and peak identifiers.</p>
+</section>
+<section id="database-design" class="level2">
+<h2 class="anchored" data-anchor-id="database-design">Database Design</h2>
+<p>The database consisted of three tables:</p>
+<section id="members" class="level3">
+<h3 class="anchored" data-anchor-id="members">Members</h3>
+<p>Included information such as:</p>
+<ul>
+<li>Age</li>
+<li>Citizenship</li>
+<li>Expedition role</li>
+<li>Success status</li>
+<li>Oxygen use</li>
+<li>Injury status</li>
+</ul>
+</section>
+<section id="expeditions" class="level3">
+<h3 class="anchored" data-anchor-id="expeditions">Expeditions</h3>
+<p>Included:</p>
+<ul>
+<li>Year</li>
+<li>Season</li>
+<li>Peak</li>
+<li>Number of members</li>
+<li>Number of hired staff</li>
+<li>Expedition outcome</li>
+</ul>
+</section>
+<section id="peaks" class="level3">
+<h3 class="anchored" data-anchor-id="peaks">Peaks</h3>
+<p>Included:</p>
+<ul>
+<li>Peak name</li>
+<li>Height</li>
+<li>Climbing status</li>
+<li>First ascent information</li>
+</ul>
+</section>
+</section>
+<section id="example-sql-query" class="level2">
+<h2 class="anchored" data-anchor-id="example-sql-query">Example SQL Query</h2>
+<p>One question we investigated was whether climbers using supplemental oxygen were more likely to successfully summit.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  m.oxygen_used,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> total_climbers,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">SUM</span>(<span class="cf">CASE</span> <span class="cf">WHEN</span> m.success <span class="op">=</span> <span class="kw">TRUE</span> <span class="cf">THEN</span> <span class="dv">1</span> <span class="cf">ELSE</span> <span class="dv">0</span> <span class="cf">END</span>) <span class="kw">AS</span> successes,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ROUND</span>(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">SUM</span>(<span class="cf">CASE</span> <span class="cf">WHEN</span> m.success <span class="op">=</span> <span class="kw">TRUE</span> <span class="cf">THEN</span> <span class="dv">1</span> <span class="cf">ELSE</span> <span class="dv">0</span> <span class="cf">END</span>) <span class="op">*</span> <span class="fl">1.0</span> <span class="op">/</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">COUNT</span>(<span class="op">*</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dv">3</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="kw">AS</span> success_rate</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> members m</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> m.oxygen_used;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This query compared summit success rates between climbers who used supplemental oxygen and those who did not.</p>
+</section>
+<section id="major-findings" class="level2">
+<h2 class="anchored" data-anchor-id="major-findings">Major Findings</h2>
+<section id="success-rates-increased-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="success-rates-increased-over-time">Success Rates Increased Over Time</h3>
+<p>We observed a general increase in expedition success rates over the years, likely due to improvements in equipment, training, and expedition planning.</p>
+</section>
+<section id="oxygen-use-improves-success" class="level3">
+<h3 class="anchored" data-anchor-id="oxygen-use-improves-success">Oxygen Use Improves Success</h3>
+<p>Climbers using supplemental oxygen had noticeably higher success rates.</p>
+</section>
+<section id="death-rates-have-declined" class="level3">
+<h3 class="anchored" data-anchor-id="death-rates-have-declined">Death Rates Have Declined</h3>
+<p>A visualization of annual death rates showed a long-term decrease in climber mortality despite growing expedition participation.</p>
+</section>
+<section id="nepal-has-the-highest-participation" class="level3">
+<h3 class="anchored" data-anchor-id="nepal-has-the-highest-participation">Nepal Has the Highest Participation</h3>
+<p>Nepal contributed the largest number of climbers, likely due to both geography and the important role Nepali guides play in Himalayan expeditions.</p>
+</section>
+</section>
+<section id="example-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="example-visualization">Example Visualization</h2>
+<p><img src="../images/death_rate_plot.png" class="img-fluid"></p>
+</section>
+<section id="skills-developed" class="level2">
+<h2 class="anchored" data-anchor-id="skills-developed">Skills Developed</h2>
+<ul>
+<li>SQL</li>
+<li>Database Design</li>
+<li>Data Cleaning</li>
+<li>Data Visualization</li>
+<li>DuckDB</li>
+<li>R Programming</li>
+<li>Relational Databases</li>
+<li>Scientific Communication</li>
+</ul>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>This project helped me develop experience building and querying relational databases while connecting SQL analysis to visualization and interpretation in R. It strengthened my understanding of the complete data analysis workflow from raw data to meaningful conclusions.</p>
+</section>
+<section id="full-report" class="level2">
+<h2 class="anchored" data-anchor-id="full-report">Full Report</h2>
+<p><a href="sql_project.pdf">View Full Project Report</a></p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

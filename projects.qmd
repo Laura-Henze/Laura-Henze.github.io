@@ -76,5 +76,4 @@ Skills emphasized:
 - Scientific literature review
 - Presentation design
 - Biochemistry communication
-```
 

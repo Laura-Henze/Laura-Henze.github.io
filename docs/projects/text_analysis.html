@@ -120,18 +120,14 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Poster Project</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../projects/research.qmd">
- <span class="dropdown-text">Research Beyond Class</span></a>
+    <a class="dropdown-item" href="../projects/research.html">
+ <span class="dropdown-text">Additional Project</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="../experience.html"> 
 <span class="menu-text">Research &amp; Experience</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../resume.qmd"> 
-<span class="menu-text">Resume</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -156,33 +152,242 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-makes-a-ted-talk-inspiring" id="toc-what-makes-a-ted-talk-inspiring" class="nav-link active" data-scroll-target="#what-makes-a-ted-talk-inspiring">What Makes a TED Talk Inspiring?</a>
+  <ul class="collapse">
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#tools-used" id="toc-tools-used" class="nav-link" data-scroll-target="#tools-used">Tools Used</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a>
+  <ul class="collapse">
+  <li><a href="#ted-main-dataset" id="toc-ted-main-dataset" class="nav-link" data-scroll-target="#ted-main-dataset">TED Main Dataset</a></li>
+  <li><a href="#transcript-dataset" id="toc-transcript-dataset" class="nav-link" data-scroll-target="#transcript-dataset">Transcript Dataset</a></li>
+  </ul></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">Data Preparation</a></li>
+  <li><a href="#sentiment-analysis-and-ted-talk-popularity" id="toc-sentiment-analysis-and-ted-talk-popularity" class="nav-link" data-scroll-target="#sentiment-analysis-and-ted-talk-popularity">Sentiment Analysis and TED Talk Popularity</a>
+  <ul class="collapse">
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  </ul></li>
+  <li><a href="#tf-idf-analysis-and-popularity-groups" id="toc-tf-idf-analysis-and-popularity-groups" class="nav-link" data-scroll-target="#tf-idf-analysis-and-popularity-groups">TF-IDF Analysis and Popularity Groups</a>
+  <ul class="collapse">
+  <li><a href="#visualization-1" id="toc-visualization-1" class="nav-link" data-scroll-target="#visualization-1">Visualization</a></li>
+  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1">Interpretation</a></li>
+  </ul></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a>
+  <ul class="collapse">
+  <li><a href="#emotional-language-matters" id="toc-emotional-language-matters" class="nav-link" data-scroll-target="#emotional-language-matters">Emotional Language Matters</a></li>
+  <li><a href="#technical-vocabulary-appears-less-frequently-in-viral-talks" id="toc-technical-vocabulary-appears-less-frequently-in-viral-talks" class="nav-link" data-scroll-target="#technical-vocabulary-appears-less-frequently-in-viral-talks">Technical Vocabulary Appears Less Frequently in Viral Talks</a></li>
+  <li><a href="#communication-is-multifaceted" id="toc-communication-is-multifaceted" class="nav-link" data-scroll-target="#communication-is-multifaceted">Communication Is Multifaceted</a></li>
+  </ul></li>
+  <li><a href="#skills-developed" id="toc-skills-developed" class="nav-link" data-scroll-target="#skills-developed">Skills Developed</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#full-report" id="toc-full-report" class="nav-link" data-scroll-target="#full-report">Full Report</a></li>
+  <li><a href="#view-full-project-report" id="toc-view-full-project-report" class="nav-link" data-scroll-target="#view-full-project-report">View Full Project Report</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data Source</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">text_analysis</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
+<section id="what-makes-a-ted-talk-inspiring" class="level1">
+<h1>What Makes a TED Talk Inspiring?</h1>
+<p><strong>Group Members:</strong> Laura Henze &amp; Tristan Zook</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>In this project, we used natural language processing and text mining techniques in R to investigate patterns within TED Talk transcripts. By combining transcript text with metadata such as view counts, we explored how language use may influence audience engagement.</p>
+<p>The analysis focused on two primary questions:</p>
+<ol type="1">
+<li>Do highly viewed TED Talks use different emotional language than less popular talks?</li>
+<li>Are certain words or themes more characteristic of popular versus unpopular TED Talks?</li>
+</ol>
+<hr>
+</section>
+<section id="tools-used" class="level2">
+<h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
+<ul>
+<li>R</li>
+<li>tidytext</li>
+<li>tidyverse</li>
+<li>ggplot2</li>
+<li>Regular Expressions (Regex)</li>
+<li>Sentiment Analysis</li>
+<li>TF-IDF Analysis</li>
+</ul>
+<hr>
+</section>
+<section id="data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
+<p>The project used two datasets from the Kaggle TED Talks collection.</p>
+<section id="ted-main-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="ted-main-dataset">TED Main Dataset</h3>
+<p>Included:</p>
+<ul>
+<li>Speaker names</li>
+<li>Talk titles</li>
+<li>View counts</li>
+<li>Tags</li>
+<li>Publication dates</li>
+<li>Number of comments</li>
+</ul>
+</section>
+<section id="transcript-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="transcript-dataset">Transcript Dataset</h3>
+<p>Included:</p>
+<ul>
+<li>Full TED Talk transcripts</li>
+<li>TED Talk URLs</li>
+</ul>
+<p>The datasets were joined using TED Talk URLs, allowing transcript text to be analyzed alongside popularity metrics.</p>
+<hr>
+</section>
+</section>
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
+<p>Before analysis, the transcripts were cleaned by:</p>
+<ul>
+<li>Removing stop words</li>
+<li>Removing numbers</li>
+<li>Removing audience cues such as applause</li>
+<li>Retaining laughter markers when relevant</li>
+<li>Tokenizing transcript text into individual words</li>
+</ul>
+<p>The cleaned dataset was then used for sentiment analysis and TF-IDF analysis.</p>
+<hr>
+</section>
+<section id="sentiment-analysis-and-ted-talk-popularity" class="level2">
+<h2 class="anchored" data-anchor-id="sentiment-analysis-and-ted-talk-popularity">Sentiment Analysis and TED Talk Popularity</h2>
+<p>To investigate emotional language, we applied the NRC sentiment lexicon to classify words into emotional categories.</p>
+<p>Positive emotions included:</p>
+<ul>
+<li>Joy</li>
+<li>Trust</li>
+<li>Anticipation</li>
+<li>Surprise</li>
+</ul>
+<p>Negative emotions included:</p>
+<ul>
+<li>Fear</li>
+<li>Anger</li>
+<li>Sadness</li>
+<li>Disgust</li>
+</ul>
+<p>Each TED Talk received a normalized sentiment score that was compared against total view counts.</p>
+<section id="visualization" class="level3">
+<h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
+<p><img src="../images/sentiment_plot.png" class="img-fluid" style="width:85.0%"></p>
+</section>
+<section id="interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation">Interpretation</h3>
+<p>This visualization explores the relationship between emotional language and TED Talk popularity.</p>
+<p>A slight positive relationship emerged between emotional positivity and popularity. Talks containing more optimistic and uplifting language tended to receive somewhat higher view counts on average.</p>
+<p>However, the relationship was not especially strong. Many talks with neutral or negative sentiment still achieved high view counts, suggesting that emotional positivity alone does not determine success.</p>
+<p>Other factors such as speaker reputation, storytelling ability, topic relevance, production quality, and timing likely play major roles in audience engagement.</p>
+<hr>
+</section>
+</section>
+<section id="tf-idf-analysis-and-popularity-groups" class="level2">
+<h2 class="anchored" data-anchor-id="tf-idf-analysis-and-popularity-groups">TF-IDF Analysis and Popularity Groups</h2>
+<p>Sentiment analysis captures only part of a transcript’s meaning. To investigate differences in word usage more deeply, we performed a TF-IDF analysis.</p>
+<p>TED Talks were divided into:</p>
+<ul>
+<li>Most Popular Talks (top 10% by views)</li>
+<li>Least Popular Talks (bottom 50% by views)</li>
+</ul>
+<p>TF-IDF scores were used to identify words that were particularly important within one group relative to the other.</p>
+<section id="visualization-1" class="level3">
+<h3 class="anchored" data-anchor-id="visualization-1">Visualization</h3>
+<p><img src="../images/tf_idf.png" class="img-fluid" style="width:85.0%"></p>
+</section>
+<section id="interpretation-1" class="level3">
+<h3 class="anchored" data-anchor-id="interpretation-1">Interpretation</h3>
+<p>The dumbbell plot compares the importance of words across popularity groups.</p>
+<p>Words that were especially influential in popular talks included:</p>
+<ul>
+<li>grit</li>
+<li>kindergarten</li>
+<li>distractions</li>
+<li>public’s</li>
+<li>ripples</li>
+</ul>
+<p>Words that were more influential in less popular talks included:</p>
+<ul>
+<li>serotonin</li>
+<li>circuitry</li>
+<li>intergalactic</li>
+<li>pixels</li>
+<li>placebo</li>
+</ul>
+<p>These findings suggest that highly viewed TED Talks may rely more heavily on broadly relatable language, while less popular talks often contain more technical or specialized vocabulary.</p>
+<p>While these conclusions are somewhat speculative, they provide insight into how communication style may influence audience engagement.</p>
+<hr>
+</section>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<section id="emotional-language-matters" class="level3">
+<h3 class="anchored" data-anchor-id="emotional-language-matters">Emotional Language Matters</h3>
+<p>Positive sentiment showed a modest association with TED Talk popularity.</p>
+</section>
+<section id="technical-vocabulary-appears-less-frequently-in-viral-talks" class="level3">
+<h3 class="anchored" data-anchor-id="technical-vocabulary-appears-less-frequently-in-viral-talks">Technical Vocabulary Appears Less Frequently in Viral Talks</h3>
+<p>Highly viewed TED Talks tended to emphasize language that was accessible to a broader audience.</p>
+</section>
+<section id="communication-is-multifaceted" class="level3">
+<h3 class="anchored" data-anchor-id="communication-is-multifaceted">Communication Is Multifaceted</h3>
+<p>Popularity is likely influenced by many factors beyond language alone, including:</p>
+<ul>
+<li>Speaker reputation</li>
+<li>Storytelling ability</li>
+<li>Topic relevance</li>
+<li>Timing</li>
+<li>Production quality</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="skills-developed" class="level2">
+<h2 class="anchored" data-anchor-id="skills-developed">Skills Developed</h2>
+<p>Through this project, I gained experience with:</p>
+<ul>
+<li>Natural Language Processing (NLP)</li>
+<li>Text Mining</li>
+<li>Sentiment Analysis</li>
+<li>TF-IDF Analysis</li>
+<li>Regular Expressions</li>
+<li>Data Cleaning</li>
+<li>Data Visualization</li>
+<li>Scientific Communication</li>
+</ul>
+<hr>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>This project demonstrated how computational text analysis can uncover patterns that may not be obvious through casual observation alone. By combining transcript text with audience engagement metrics, we were able to investigate how language, emotion, and communication style interact within one of the world’s most influential public speaking platforms.</p>
+<p>The project strengthened my skills in data wrangling, visualization, natural language processing, and communicating technical findings to a broader audience.</p>
+<hr>
+</section>
+<section id="full-report" class="level2">
+<h2 class="anchored" data-anchor-id="full-report">Full Report</h2>
+</section>
+<section id="view-full-project-report" class="level2">
+<h2 class="anchored" data-anchor-id="view-full-project-report"><a href="ted_talk_text_analysis.pdf">View Full Project Report</a></h2>
+</section>
+<section id="data-source" class="level2">
+<h2 class="anchored" data-anchor-id="data-source">Data Source</h2>
+<p><a href="https://www.kaggle.com/datasets/rounakbanik/ted-talks">TED Talks Dataset (Kaggle)</a></p>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

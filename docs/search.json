@@ -1,5 +1,278 @@
 [
   {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Additional Project",
+    "section": "",
+    "text": "This project was completed as part of my Statistics for Data Science coursework and explored factors associated with individual medical insurance charges. Using a publicly available insurance dataset, I investigated how demographic and health-related variables influence healthcare costs and applied statistical and data visualization techniques to identify important patterns.\n\n\n\nThe primary goal of the project was to determine which factors were most strongly associated with insurance charges and to evaluate the relationships among variables such as age, body mass index (BMI), smoking status, number of children, sex, and geographic region.\n\n\n\nThe analysis was conducted in R using data visualization and statistical modeling techniques. Exploratory data analysis was performed using ggplot2 to identify trends and potential relationships within the data. Variables were compared through summary statistics and visualizations, and regression methods were used to quantify the effects of different predictors on insurance charges.\n\n\n\n\nSmoking status was the strongest predictor of increased insurance charges.\nAge was positively associated with healthcare costs, with older individuals generally experiencing higher charges.\nBMI also showed a positive relationship with charges, particularly among smokers.\nSex and geographic region had comparatively smaller effects on overall insurance costs.\nVisualizations helped highlight interactions among variables and identify trends that were not immediately apparent from summary statistics alone.\n\n\n\n\n\nR Programming\nData Cleaning and Exploration\nData Visualization with ggplot2\nStatistical Modeling\nRegression Analysis\nInterpretation and Communication of Results\n\n\n\n\nThis project strengthened my ability to work with real-world datasets and communicate statistical findings through visualizations and written analysis. It also reinforced the importance of exploratory data analysis in understanding complex relationships within data before applying formal statistical models. Through this project, I gained additional experience using R as a tool for reproducible data analysis and scientific communication."
+  },
+  {
+    "objectID": "research.html#insurance-charges-analysis",
+    "href": "research.html#insurance-charges-analysis",
+    "title": "Additional Project",
+    "section": "",
+    "text": "This project was completed as part of my Statistics for Data Science coursework and explored factors associated with individual medical insurance charges. Using a publicly available insurance dataset, I investigated how demographic and health-related variables influence healthcare costs and applied statistical and data visualization techniques to identify important patterns.\n\n\n\nThe primary goal of the project was to determine which factors were most strongly associated with insurance charges and to evaluate the relationships among variables such as age, body mass index (BMI), smoking status, number of children, sex, and geographic region.\n\n\n\nThe analysis was conducted in R using data visualization and statistical modeling techniques. Exploratory data analysis was performed using ggplot2 to identify trends and potential relationships within the data. Variables were compared through summary statistics and visualizations, and regression methods were used to quantify the effects of different predictors on insurance charges.\n\n\n\n\nSmoking status was the strongest predictor of increased insurance charges.\nAge was positively associated with healthcare costs, with older individuals generally experiencing higher charges.\nBMI also showed a positive relationship with charges, particularly among smokers.\nSex and geographic region had comparatively smaller effects on overall insurance costs.\nVisualizations helped highlight interactions among variables and identify trends that were not immediately apparent from summary statistics alone.\n\n\n\n\n\nR Programming\nData Cleaning and Exploration\nData Visualization with ggplot2\nStatistical Modeling\nRegression Analysis\nInterpretation and Communication of Results\n\n\n\n\nThis project strengthened my ability to work with real-world datasets and communicate statistical findings through visualizations and written analysis. It also reinforced the importance of exploratory data analysis in understanding complex relationships within data before applying formal statistical models. Through this project, I gained additional experience using R as a tool for reproducible data analysis and scientific communication."
+  },
+  {
+    "objectID": "research.html#full-report",
+    "href": "research.html#full-report",
+    "title": "Additional Project",
+    "section": "Full Report",
+    "text": "Full Report\nView Full Project Report"
+  },
+  {
+    "objectID": "projects/sql_project.html",
+    "href": "projects/sql_project.html",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "Group Members: Laura Henze and Tristan Zook\n\n\nIn this project, we used SQL and R to analyze historical Himalayan climbing expedition data from the Himalayan Expedition Dataset. Our goal was to investigate patterns in expedition success, climber safety, participation, and staffing.\nThe project involved: - Building a relational database - Importing and cleaning data - Writing SQL queries - Visualizing results in R - Interpreting expedition trends\n\n\n\nWe worked with three datasets:\n\nmembers\nexpeditions\npeaks\n\nThese datasets were imported into a DuckDB database and linked using expedition and peak identifiers.\n\n\n\nThe database consisted of three tables:\n\n\nIncluded information such as:\n\nAge\nCitizenship\nExpedition role\nSuccess status\nOxygen use\nInjury status\n\n\n\n\nIncluded:\n\nYear\nSeason\nPeak\nNumber of members\nNumber of hired staff\nExpedition outcome\n\n\n\n\nIncluded:\n\nPeak name\nHeight\nClimbing status\nFirst ascent information\n\n\n\n\n\nOne question we investigated was whether climbers using supplemental oxygen were more likely to successfully summit.\nSELECT\n  m.oxygen_used,\n  COUNT(*) AS total_climbers,\n  SUM(CASE WHEN m.success = TRUE THEN 1 ELSE 0 END) AS successes,\n  ROUND(\n    SUM(CASE WHEN m.success = TRUE THEN 1 ELSE 0 END) * 1.0 /\n    COUNT(*),\n    3\n  ) AS success_rate\nFROM members m\nGROUP BY m.oxygen_used;\nThis query compared summit success rates between climbers who used supplemental oxygen and those who did not.\n\n\n\n\n\nWe observed a general increase in expedition success rates over the years, likely due to improvements in equipment, training, and expedition planning.\n\n\n\nClimbers using supplemental oxygen had noticeably higher success rates.\n\n\n\nA visualization of annual death rates showed a long-term decrease in climber mortality despite growing expedition participation.\n\n\n\nNepal contributed the largest number of climbers, likely due to both geography and the important role Nepali guides play in Himalayan expeditions.\n\n\n\n\n\n\n\n\n\nSQL\nDatabase Design\nData Cleaning\nData Visualization\nDuckDB\nR Programming\nRelational Databases\nScientific Communication\n\n\n\n\nThis project helped me develop experience building and querying relational databases while connecting SQL analysis to visualization and interpretation in R. It strengthened my understanding of the complete data analysis workflow from raw data to meaningful conclusions.\n\n\n\nView Full Project Report"
+  },
+  {
+    "objectID": "projects/sql_project.html#project-overview",
+    "href": "projects/sql_project.html#project-overview",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "In this project, we used SQL and R to analyze historical Himalayan climbing expedition data from the Himalayan Expedition Dataset. Our goal was to investigate patterns in expedition success, climber safety, participation, and staffing.\nThe project involved: - Building a relational database - Importing and cleaning data - Writing SQL queries - Visualizing results in R - Interpreting expedition trends"
+  },
+  {
+    "objectID": "projects/sql_project.html#datasets",
+    "href": "projects/sql_project.html#datasets",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "We worked with three datasets:\n\nmembers\nexpeditions\npeaks\n\nThese datasets were imported into a DuckDB database and linked using expedition and peak identifiers."
+  },
+  {
+    "objectID": "projects/sql_project.html#database-design",
+    "href": "projects/sql_project.html#database-design",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "The database consisted of three tables:\n\n\nIncluded information such as:\n\nAge\nCitizenship\nExpedition role\nSuccess status\nOxygen use\nInjury status\n\n\n\n\nIncluded:\n\nYear\nSeason\nPeak\nNumber of members\nNumber of hired staff\nExpedition outcome\n\n\n\n\nIncluded:\n\nPeak name\nHeight\nClimbing status\nFirst ascent information"
+  },
+  {
+    "objectID": "projects/sql_project.html#example-sql-query",
+    "href": "projects/sql_project.html#example-sql-query",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "One question we investigated was whether climbers using supplemental oxygen were more likely to successfully summit.\nSELECT\n  m.oxygen_used,\n  COUNT(*) AS total_climbers,\n  SUM(CASE WHEN m.success = TRUE THEN 1 ELSE 0 END) AS successes,\n  ROUND(\n    SUM(CASE WHEN m.success = TRUE THEN 1 ELSE 0 END) * 1.0 /\n    COUNT(*),\n    3\n  ) AS success_rate\nFROM members m\nGROUP BY m.oxygen_used;\nThis query compared summit success rates between climbers who used supplemental oxygen and those who did not."
+  },
+  {
+    "objectID": "projects/sql_project.html#major-findings",
+    "href": "projects/sql_project.html#major-findings",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "We observed a general increase in expedition success rates over the years, likely due to improvements in equipment, training, and expedition planning.\n\n\n\nClimbers using supplemental oxygen had noticeably higher success rates.\n\n\n\nA visualization of annual death rates showed a long-term decrease in climber mortality despite growing expedition participation.\n\n\n\nNepal contributed the largest number of climbers, likely due to both geography and the important role Nepali guides play in Himalayan expeditions."
+  },
+  {
+    "objectID": "projects/sql_project.html#skills-developed",
+    "href": "projects/sql_project.html#skills-developed",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "SQL\nDatabase Design\nData Cleaning\nData Visualization\nDuckDB\nR Programming\nRelational Databases\nScientific Communication"
+  },
+  {
+    "objectID": "projects/sql_project.html#reflection",
+    "href": "projects/sql_project.html#reflection",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "This project helped me develop experience building and querying relational databases while connecting SQL analysis to visualization and interpretation in R. It strengthened my understanding of the complete data analysis workflow from raw data to meaningful conclusions."
+  },
+  {
+    "objectID": "projects/sql_project.html#full-report",
+    "href": "projects/sql_project.html#full-report",
+    "title": "Analyzing Himalayan Climbing Expeditions with SQL and R",
+    "section": "",
+    "text": "View Full Project Report"
+  },
+  {
+    "objectID": "projects/pristineR.html",
+    "href": "projects/pristineR.html",
+    "title": "Full README",
+    "section": "",
+    "text": "pristineR is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.\nThe package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.\nThis project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration."
+  },
+  {
+    "objectID": "projects/pristineR.html#project-overview",
+    "href": "projects/pristineR.html#project-overview",
+    "title": "Full README",
+    "section": "",
+    "text": "pristineR is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.\nThe package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.\nThis project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration."
+  },
+  {
+    "objectID": "projects/pristineR.html#motivation",
+    "href": "projects/pristineR.html#motivation",
+    "title": "Full README",
+    "section": "Motivation",
+    "text": "Motivation\nMany datasets require extensive cleaning before analysis can begin. I created pristineR to streamline repetitive preprocessing tasks into lightweight helper functions that are easy to use and designed to fail safely when invalid inputs are encountered.\nThis project also gave me experience thinking about usability and documentation from the perspective of future users."
+  },
+  {
+    "objectID": "projects/pristineR.html#why-pristiner",
+    "href": "projects/pristineR.html#why-pristiner",
+    "title": "Full README",
+    "section": "Why pristineR?",
+    "text": "Why pristineR?\nMany real-world datasets contain inconsistent date formats, messy column names, and missing values that require repetitive cleaning before analysis can begin.\npristineR was created to simplify these common preprocessing tasks through lightweight helper functions that are easy to use, well documented, and designed to fail safely when given invalid inputs."
+  },
+  {
+    "objectID": "projects/pristineR.html#installation",
+    "href": "projects/pristineR.html#installation",
+    "title": "Full README",
+    "section": "Installation",
+    "text": "Installation\nYou can install the development version of pristineR from GitHub with:\n# install.packages(\"remotes\")\n# install.packages(\"devtools\")\ndevtools::install_github(\"ADC-405-S26/pristineR\")"
+  },
+  {
+    "objectID": "projects/pristineR.html#load-the-package",
+    "href": "projects/pristineR.html#load-the-package",
+    "title": "Full README",
+    "section": "Load the Package",
+    "text": "Load the Package\nlibrary(pristineR)"
+  },
+  {
+    "objectID": "projects/pristineR.html#example-dataset",
+    "href": "projects/pristineR.html#example-dataset",
+    "title": "Full README",
+    "section": "Example Dataset",
+    "text": "Example Dataset\nThe package contains an example dataset called messy_survey.\nThe dataset intentionally contains inconsistent column names, mixed date formats, and missing values."
+  },
+  {
+    "objectID": "projects/pristineR.html#clean-column-names",
+    "href": "projects/pristineR.html#clean-column-names",
+    "title": "Full README",
+    "section": "Clean Column Names",
+    "text": "Clean Column Names\nDatasets imported from spreadsheets or surveys often contain spaces, punctuation, or inconsistent capitalization in column names.\nThe clean_names() function converts messy column names into snake_case format.\nnames(messy_survey)\n\ncleaned_data &lt;- clean_names(messy_survey)\n\nnames(cleaned_data)"
+  },
+  {
+    "objectID": "projects/pristineR.html#parse-dates",
+    "href": "projects/pristineR.html#parse-dates",
+    "title": "Full README",
+    "section": "Parse Dates",
+    "text": "Parse Dates\nDatasets frequently contain dates stored in multiple formats.\nThe safe_date_parse() function safely converts these values into standard Date objects.\ncleaned_data$submission_date &lt;-\n  safe_date_parse(cleaned_data$submission_date)\n\ncleaned_data"
+  },
+  {
+    "objectID": "projects/pristineR.html#handling-invalid-dates",
+    "href": "projects/pristineR.html#handling-invalid-dates",
+    "title": "Full README",
+    "section": "Handling Invalid Dates",
+    "text": "Handling Invalid Dates\nIf a date cannot be parsed, safe_date_parse() returns NA and produces a warning message instead of stopping execution completely.\nsafe_date_parse(c(\"2024-01-01\", \"bad-date\"))"
+  },
+  {
+    "objectID": "projects/pristineR.html#generate-summary-statistics",
+    "href": "projects/pristineR.html#generate-summary-statistics",
+    "title": "Full README",
+    "section": "Generate Summary Statistics",
+    "text": "Generate Summary Statistics\nThe quick_summary() function generates common summary statistics for selected numeric columns.\nquick_summary(\n  cleaned_data,\n  c(\"exam_score\")\n)\nThe summary includes: - mean, - standard deviation, - minimum, - maximum, - and missing value counts."
+  },
+  {
+    "objectID": "projects/pristineR.html#function-parameters",
+    "href": "projects/pristineR.html#function-parameters",
+    "title": "Full README",
+    "section": "Function Parameters",
+    "text": "Function Parameters\n\nsafe_date_parse(x)\n\nx: a character vector containing date values\n\n\n\nquick_summary(data, columns)\n\ndata: a data frame\ncolumns: character vector of numeric columns to summarize\n\n\n\nclean_names(data)\n\ndata: a data frame with column names to clean"
+  },
+  {
+    "objectID": "projects/pristineR.html#additional-example",
+    "href": "projects/pristineR.html#additional-example",
+    "title": "Full README",
+    "section": "Additional Example",
+    "text": "Additional Example\npristineR can also be used with other messy datasets.\nexample_data &lt;- data.frame(\n  \"Customer Name\" = c(\"Alice\", \"Bob\"),\n  \"Purchase.Date\" = c(\"2024-01-01\", \"01/15/2024\"),\n  \"Total Sales $\" = c(120, 95)\n)\n\nexample_data &lt;- clean_names(example_data)\n\nexample_data$purchase_date &lt;-\n  safe_date_parse(example_data$purchase_date)\n\nexample_data"
+  },
+  {
+    "objectID": "projects/pristineR.html#package-functions",
+    "href": "projects/pristineR.html#package-functions",
+    "title": "Full README",
+    "section": "Package Functions",
+    "text": "Package Functions\npristineR currently includes: - safe_date_parse() - quick_summary() - clean_names()"
+  },
+  {
+    "objectID": "projects/pristineR.html#skills-developed",
+    "href": "projects/pristineR.html#skills-developed",
+    "title": "Full README",
+    "section": "Skills Developed",
+    "text": "Skills Developed\nThrough this project, I gained experience with: - R package development - Documentation writing - GitHub workflows - Reproducible analysis - Data cleaning pipelines - Error handling - User-centered function design"
+  },
+  {
+    "objectID": "projects/pristineR.html#revisions-after-feedback",
+    "href": "projects/pristineR.html#revisions-after-feedback",
+    "title": "Full README",
+    "section": "Revisions After Feedback",
+    "text": "Revisions After Feedback\nFollowing peer review and instructor feedback, I expanded the project documentation to include: - clearer explanations of when and why to use each function, - additional edge case examples, - more detailed workflow demonstrations, - and improved descriptions throughout the README and vignette.\nThese revisions made the package easier to understand and more useful for future users."
+  },
+  {
+    "objectID": "projects/pristineR.html#github-repository",
+    "href": "projects/pristineR.html#github-repository",
+    "title": "Full README",
+    "section": "GitHub Repository",
+    "text": "GitHub Repository\nView the pristineR repository ````"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This page highlights projects involving data science, scientific communication, programming, and computational analysis.\nThroughout these projects, I developed experience with: - R programming - Data visualization - Statistical analysis - SQL - Text analysis - Scientific communication - GitHub workflows - Reproducible research practices"
+  },
+  {
+    "objectID": "projects.html#featured-projects",
+    "href": "projects.html#featured-projects",
+    "title": "Projects",
+    "section": "Featured Projects",
+    "text": "Featured Projects\n\npristineR Package\nAn R package designed to simplify common data-cleaning and summarization tasks through user-friendly helper functions.\nSkills emphasized: - R package development - Documentation - Data cleaning pipelines - Error handling - GitHub collaboration\n\n\n\nSQL Project\nA project focused on querying and analyzing structured datasets using SQL.\nSkills emphasized: - Database querying - Data organization - Relational databases - Data interpretation\n\n\n\nText Analysis Project\nA computational text analysis project involving pattern recognition and visualization of textual datasets.\nSkills emphasized: - Text mining - Natural language processing - Data visualization - Statistical analysis\n\n\n\nPoster Project\nA scientific communication project focused on presenting technical material clearly and effectively through visual design.\nSkills emphasized: - Scientific communication - Figure design - Data presentation - Visual storytelling\n\n\n\nResearch Beyond Class\nAdditional scientific and research experiences outside of coursework, including literature interpretation and presentation development.\nSkills emphasized: - Research analysis - Scientific literature review - Presentation design - Biochemistry communication"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University studying Biochemistry, Data Science, and Anthropology. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School, where I first developed my love for science.\nIn the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology. My academic interests combine laboratory science, analytical chemistry, and computational analysis.\nOne of my favorite courses at Lawrence has been analytical chemistry, where I developed strong laboratory skills and gained experience with precise quantitative techniques and scientific methodology. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting, and reproducible scientific work.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something I hadn’t previously considered, but quickly realized was an incredibly valuable skill to have. With this, I discovered my enjoyment of data science, creating informative figures, and using computational analysis to support technical lab reports and scientific communication.\n\n\n\nBiochemistry\nAnalytical Chemistry\nForensic Toxicology\nScientific Research\nData Science\nData Visualization\n\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young, and I’m very grateful to represent my team here.\nIn addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).\n```"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Home",
+    "section": "",
+    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University studying Biochemistry, Data Science, and Anthropology. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School, where I first developed my love for science.\nIn the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology. My academic interests combine laboratory science, analytical chemistry, and computational analysis.\nOne of my favorite courses at Lawrence has been analytical chemistry, where I developed strong laboratory skills and gained experience with precise quantitative techniques and scientific methodology. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting, and reproducible scientific work.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something I hadn’t previously considered, but quickly realized was an incredibly valuable skill to have. With this, I discovered my enjoyment of data science, creating informative figures, and using computational analysis to support technical lab reports and scientific communication.\n\n\n\nBiochemistry\nAnalytical Chemistry\nForensic Toxicology\nScientific Research\nData Science\nData Visualization\n\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young, and I’m very grateful to represent my team here.\nIn addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).\n```"
+  },
+  {
+    "objectID": "experience.html",
+    "href": "experience.html",
+    "title": "Research & Experience",
+    "section": "",
+    "text": "One of the most influential courses in my academic experience has been analytical chemistry. Through extensive laboratory work, I developed strong attention to detail, quantitative reasoning skills, and precise laboratory techniques. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting experiments, and reproducible scientific methodology.\nThis course strengthened my interest in scientific research and reinforced my appreciation for careful, data-driven laboratory work.\n\n\n\nQuantitative laboratory analysis\nScientific documentation\nPrecision measurement techniques\nExperimental troubleshooting\nReproducible scientific workflows"
+  },
+  {
+    "objectID": "experience.html#analytical-chemistry-experience",
+    "href": "experience.html#analytical-chemistry-experience",
+    "title": "Research & Experience",
+    "section": "",
+    "text": "One of the most influential courses in my academic experience has been analytical chemistry. Through extensive laboratory work, I developed strong attention to detail, quantitative reasoning skills, and precise laboratory techniques. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting experiments, and reproducible scientific methodology.\nThis course strengthened my interest in scientific research and reinforced my appreciation for careful, data-driven laboratory work.\n\n\n\nQuantitative laboratory analysis\nScientific documentation\nPrecision measurement techniques\nExperimental troubleshooting\nReproducible scientific workflows"
+  },
+  {
+    "objectID": "experience.html#data-science-experience",
+    "href": "experience.html#data-science-experience",
+    "title": "Research & Experience",
+    "section": "Data Science Experience",
+    "text": "Data Science Experience\nThrough my coursework and research experiences at Lawrence University, I discovered my interest in data science and computational analysis. What began as a useful skill for processing scientific data quickly became one of my favorite parts of research.\nI particularly enjoy: - Creating informative visualizations - Cleaning and organizing datasets - Producing reproducible workflows - Combining computational tools with scientific research - Communicating technical results clearly\n\nTechnical Skills\n\nR Programming\nSQL\nQuarto\nGitHub\nData Visualization\nStatistical Analysis\nText Analysis"
+  },
+  {
+    "objectID": "experience.html#research-scientific-communication",
+    "href": "experience.html#research-scientific-communication",
+    "title": "Research & Experience",
+    "section": "Research & Scientific Communication",
+    "text": "Research & Scientific Communication\nI have also worked extensively on scientific literature interpretation and presentation development related to molecular biology and biochemistry topics.\nThese experiences helped me develop: - Scientific communication skills - Figure interpretation abilities - Presentation design experience - Critical analysis of scientific literature - Collaboration and teamwork skills"
+  },
+  {
+    "objectID": "experience.html#athletics-leadership",
+    "href": "experience.html#athletics-leadership",
+    "title": "Research & Experience",
+    "section": "Athletics & Leadership",
+    "text": "Athletics & Leadership\nOutside of academics, I compete on the Lawrence University Cross Country and Track & Field teams. Athletics has taught me discipline, time management, teamwork, and perseverance — skills that have also strengthened my academic and research work.\nBalancing athletics with STEM coursework has helped me become highly organized and adaptable in fast-paced environments."
+  },
+  {
+    "objectID": "experience.html#future-goals",
+    "href": "experience.html#future-goals",
+    "title": "Research & Experience",
+    "section": "Future Goals",
+    "text": "Future Goals\nIn the future, I hope to pursue graduate study in forensic science with a specialization in forensic toxicology. I am especially interested in combining analytical chemistry techniques with computational analysis to support scientific investigation and research. ```"
+  },
+  {
     "objectID": "pristineR.html",
     "href": "pristineR.html",
     "title": "Full README",
@@ -119,192 +392,129 @@
     "text": "GitHub Repository\nView the pristineR repository ````"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
+    "objectID": "projects/poster_project.html",
+    "href": "projects/poster_project.html",
+    "title": "A Layered Grammar of Graphics",
     "section": "",
-    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University studying Biochemistry, Data Science, and Anthropology. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School, where I first developed my love for science.\nIn the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology. My academic interests combine laboratory science, analytical chemistry, and computational analysis.\nOne of my favorite courses at Lawrence has been analytical chemistry, where I developed strong laboratory skills and gained experience with precise quantitative techniques and scientific methodology. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting, and reproducible scientific work.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something I hadn’t previously considered, but quickly realized was an incredibly valuable skill to have. With this, I discovered my enjoyment of data science, creating informative figures, and using computational analysis to support technical lab reports and scientific communication.\n\n\n\nBiochemistry\nAnalytical Chemistry\nForensic Toxicology\nScientific Research\nData Science\nData Visualization\n\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young, and I’m very grateful to represent my team here.\nIn addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).\n```"
+    "text": "This poster summarizes Hadley Wickham’s paper A Layered Grammar of Graphics and explores the theoretical foundation of ggplot2."
   },
   {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Home",
+    "objectID": "projects/poster_project.html#project-overview",
+    "href": "projects/poster_project.html#project-overview",
+    "title": "A Layered Grammar of Graphics",
     "section": "",
-    "text": "Hi there! I’m Laura (pronounced “LOR-uh”). I am an Undergraduate Student at Lawrence University studying Biochemistry, Data Science, and Anthropology. I’m a Wisconsin native and have kept my roots here ever since I was born. Prior to my time at Lawrence, I graduated near the top of my class from my alma mater, Plymouth High School, where I first developed my love for science.\nIn the future, I plan to attend a Forensic Science graduate institute in order to specialize in Forensic Toxicology. My academic interests combine laboratory science, analytical chemistry, and computational analysis.\nOne of my favorite courses at Lawrence has been analytical chemistry, where I developed strong laboratory skills and gained experience with precise quantitative techniques and scientific methodology. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting, and reproducible scientific work.\nThrough my explorations of research at Lawrence, I came to discover that data processing was something I hadn’t previously considered, but quickly realized was an incredibly valuable skill to have. With this, I discovered my enjoyment of data science, creating informative figures, and using computational analysis to support technical lab reports and scientific communication.\n\n\n\nBiochemistry\nAnalytical Chemistry\nForensic Toxicology\nScientific Research\nData Science\nData Visualization\n\nIn addition to my academics, I compete on the Lawrence Cross Country and Track and Field teams in my extra time. Running has continued to be one of my passions since I was young, and I’m very grateful to represent my team here.\nIn addition to running and my studies, I also enjoy singing, watching movies, playing videogames, and practicing my flute (when I have the time).\n```"
+    "text": "This poster summarizes Hadley Wickham’s paper A Layered Grammar of Graphics and explores the theoretical foundation of ggplot2."
   },
   {
-    "objectID": "experience.html",
-    "href": "experience.html",
-    "title": "Research & Experience",
+    "objectID": "projects/poster_project.html#poster",
+    "href": "projects/poster_project.html#poster",
+    "title": "A Layered Grammar of Graphics",
+    "section": "Poster",
+    "text": "Poster"
+  },
+  {
+    "objectID": "projects/poster_project.html#reflection",
+    "href": "projects/poster_project.html#reflection",
+    "title": "A Layered Grammar of Graphics",
+    "section": "Reflection",
+    "text": "Reflection\nThis project helped me better understand how visualization tools are designed and why ggplot2 is structured around reusable graphical components."
+  },
+  {
+    "objectID": "projects/research.html",
+    "href": "projects/research.html",
+    "title": "Additional Project",
     "section": "",
-    "text": "One of the most influential courses in my academic experience has been analytical chemistry. Through extensive laboratory work, I developed strong attention to detail, quantitative reasoning skills, and precise laboratory techniques. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting experiments, and reproducible scientific methodology.\nThis course strengthened my interest in scientific research and reinforced my appreciation for careful, data-driven laboratory work.\n\n\n\nQuantitative laboratory analysis\nScientific documentation\nPrecision measurement techniques\nExperimental troubleshooting\nReproducible scientific workflows"
+    "text": "This project was completed as part of my Statistics for Data Science coursework and explored factors associated with individual medical insurance charges. Using a publicly available insurance dataset, I investigated how demographic and health-related variables influence healthcare costs and applied statistical and data visualization techniques to identify important patterns.\n\n\n\nThe primary goal of the project was to determine which factors were most strongly associated with insurance charges and to evaluate the relationships among variables such as age, body mass index (BMI), smoking status, number of children, sex, and geographic region.\n\n\n\nThe analysis was conducted in R using data visualization and statistical modeling techniques. Exploratory data analysis was performed using ggplot2 to identify trends and potential relationships within the data. Variables were compared through summary statistics and visualizations, and regression methods were used to quantify the effects of different predictors on insurance charges.\n\n\n\n\nSmoking status was the strongest predictor of increased insurance charges.\nAge was positively associated with healthcare costs, with older individuals generally experiencing higher charges.\nBMI also showed a positive relationship with charges, particularly among smokers.\nSex and geographic region had comparatively smaller effects on overall insurance costs.\nVisualizations helped highlight interactions among variables and identify trends that were not immediately apparent from summary statistics alone.\n\n\n\n\n\nR Programming\nData Cleaning and Exploration\nData Visualization with ggplot2\nStatistical Modeling\nRegression Analysis\nInterpretation and Communication of Results\n\n\n\n\nThis project strengthened my ability to work with real-world datasets and communicate statistical findings through visualizations and written analysis. It also reinforced the importance of exploratory data analysis in understanding complex relationships within data before applying formal statistical models. Through this project, I gained additional experience using R as a tool for reproducible data analysis and scientific communication."
   },
   {
-    "objectID": "experience.html#analytical-chemistry-experience",
-    "href": "experience.html#analytical-chemistry-experience",
-    "title": "Research & Experience",
+    "objectID": "projects/research.html#insurance-charges-analysis",
+    "href": "projects/research.html#insurance-charges-analysis",
+    "title": "Additional Project",
     "section": "",
-    "text": "One of the most influential courses in my academic experience has been analytical chemistry. Through extensive laboratory work, I developed strong attention to detail, quantitative reasoning skills, and precise laboratory techniques. I especially enjoyed spending long hours in the lab focusing on accuracy, troubleshooting experiments, and reproducible scientific methodology.\nThis course strengthened my interest in scientific research and reinforced my appreciation for careful, data-driven laboratory work.\n\n\n\nQuantitative laboratory analysis\nScientific documentation\nPrecision measurement techniques\nExperimental troubleshooting\nReproducible scientific workflows"
+    "text": "This project was completed as part of my Statistics for Data Science coursework and explored factors associated with individual medical insurance charges. Using a publicly available insurance dataset, I investigated how demographic and health-related variables influence healthcare costs and applied statistical and data visualization techniques to identify important patterns.\n\n\n\nThe primary goal of the project was to determine which factors were most strongly associated with insurance charges and to evaluate the relationships among variables such as age, body mass index (BMI), smoking status, number of children, sex, and geographic region.\n\n\n\nThe analysis was conducted in R using data visualization and statistical modeling techniques. Exploratory data analysis was performed using ggplot2 to identify trends and potential relationships within the data. Variables were compared through summary statistics and visualizations, and regression methods were used to quantify the effects of different predictors on insurance charges.\n\n\n\n\nSmoking status was the strongest predictor of increased insurance charges.\nAge was positively associated with healthcare costs, with older individuals generally experiencing higher charges.\nBMI also showed a positive relationship with charges, particularly among smokers.\nSex and geographic region had comparatively smaller effects on overall insurance costs.\nVisualizations helped highlight interactions among variables and identify trends that were not immediately apparent from summary statistics alone.\n\n\n\n\n\nR Programming\nData Cleaning and Exploration\nData Visualization with ggplot2\nStatistical Modeling\nRegression Analysis\nInterpretation and Communication of Results\n\n\n\n\nThis project strengthened my ability to work with real-world datasets and communicate statistical findings through visualizations and written analysis. It also reinforced the importance of exploratory data analysis in understanding complex relationships within data before applying formal statistical models. Through this project, I gained additional experience using R as a tool for reproducible data analysis and scientific communication."
   },
   {
-    "objectID": "experience.html#data-science-experience",
-    "href": "experience.html#data-science-experience",
-    "title": "Research & Experience",
-    "section": "Data Science Experience",
-    "text": "Data Science Experience\nThrough my coursework and research experiences at Lawrence University, I discovered my interest in data science and computational analysis. What began as a useful skill for processing scientific data quickly became one of my favorite parts of research.\nI particularly enjoy: - Creating informative visualizations - Cleaning and organizing datasets - Producing reproducible workflows - Combining computational tools with scientific research - Communicating technical results clearly\n\nTechnical Skills\n\nR Programming\nSQL\nQuarto\nGitHub\nData Visualization\nStatistical Analysis\nText Analysis"
+    "objectID": "projects/research.html#full-report",
+    "href": "projects/research.html#full-report",
+    "title": "Additional Project",
+    "section": "Full Report",
+    "text": "Full Report\nView Full Project Report"
   },
   {
-    "objectID": "experience.html#research-scientific-communication",
-    "href": "experience.html#research-scientific-communication",
-    "title": "Research & Experience",
-    "section": "Research & Scientific Communication",
-    "text": "Research & Scientific Communication\nI have also worked extensively on scientific literature interpretation and presentation development related to molecular biology and biochemistry topics.\nThese experiences helped me develop: - Scientific communication skills - Figure interpretation abilities - Presentation design experience - Critical analysis of scientific literature - Collaboration and teamwork skills"
-  },
-  {
-    "objectID": "experience.html#athletics-leadership",
-    "href": "experience.html#athletics-leadership",
-    "title": "Research & Experience",
-    "section": "Athletics & Leadership",
-    "text": "Athletics & Leadership\nOutside of academics, I compete on the Lawrence University Cross Country and Track & Field teams. Athletics has taught me discipline, time management, teamwork, and perseverance — skills that have also strengthened my academic and research work.\nBalancing athletics with STEM coursework has helped me become highly organized and adaptable in fast-paced environments."
-  },
-  {
-    "objectID": "experience.html#future-goals",
-    "href": "experience.html#future-goals",
-    "title": "Research & Experience",
-    "section": "Future Goals",
-    "text": "Future Goals\nIn the future, I hope to pursue graduate study in forensic science with a specialization in forensic toxicology. I am especially interested in combining analytical chemistry techniques with computational analysis to support scientific investigation and research. ```"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "projects/text_analysis.html",
+    "href": "projects/text_analysis.html",
+    "title": "What Makes a TED Talk Inspiring?",
     "section": "",
-    "text": "This page highlights projects involving data science, scientific communication, programming, and computational analysis.\nThroughout these projects, I developed experience with: - R programming - Data visualization - Statistical analysis - SQL - Text analysis - Scientific communication - GitHub workflows - Reproducible research practices"
+    "text": "Group Members: Laura Henze & Tristan Zook\n\n\nIn this project, we used natural language processing and text mining techniques in R to investigate patterns within TED Talk transcripts. By combining transcript text with metadata such as view counts, we explored how language use may influence audience engagement.\nThe analysis focused on two primary questions:\n\nDo highly viewed TED Talks use different emotional language than less popular talks?\nAre certain words or themes more characteristic of popular versus unpopular TED Talks?\n\n\n\n\n\n\nR\ntidytext\ntidyverse\nggplot2\nRegular Expressions (Regex)\nSentiment Analysis\nTF-IDF Analysis\n\n\n\n\n\nThe project used two datasets from the Kaggle TED Talks collection.\n\n\nIncluded:\n\nSpeaker names\nTalk titles\nView counts\nTags\nPublication dates\nNumber of comments\n\n\n\n\nIncluded:\n\nFull TED Talk transcripts\nTED Talk URLs\n\nThe datasets were joined using TED Talk URLs, allowing transcript text to be analyzed alongside popularity metrics.\n\n\n\n\n\nBefore analysis, the transcripts were cleaned by:\n\nRemoving stop words\nRemoving numbers\nRemoving audience cues such as applause\nRetaining laughter markers when relevant\nTokenizing transcript text into individual words\n\nThe cleaned dataset was then used for sentiment analysis and TF-IDF analysis.\n\n\n\n\nTo investigate emotional language, we applied the NRC sentiment lexicon to classify words into emotional categories.\nPositive emotions included:\n\nJoy\nTrust\nAnticipation\nSurprise\n\nNegative emotions included:\n\nFear\nAnger\nSadness\nDisgust\n\nEach TED Talk received a normalized sentiment score that was compared against total view counts.\n\n\n\n\n\n\nThis visualization explores the relationship between emotional language and TED Talk popularity.\nA slight positive relationship emerged between emotional positivity and popularity. Talks containing more optimistic and uplifting language tended to receive somewhat higher view counts on average.\nHowever, the relationship was not especially strong. Many talks with neutral or negative sentiment still achieved high view counts, suggesting that emotional positivity alone does not determine success.\nOther factors such as speaker reputation, storytelling ability, topic relevance, production quality, and timing likely play major roles in audience engagement.\n\n\n\n\n\nSentiment analysis captures only part of a transcript’s meaning. To investigate differences in word usage more deeply, we performed a TF-IDF analysis.\nTED Talks were divided into:\n\nMost Popular Talks (top 10% by views)\nLeast Popular Talks (bottom 50% by views)\n\nTF-IDF scores were used to identify words that were particularly important within one group relative to the other.\n\n\n\n\n\n\nThe dumbbell plot compares the importance of words across popularity groups.\nWords that were especially influential in popular talks included:\n\ngrit\nkindergarten\ndistractions\npublic’s\nripples\n\nWords that were more influential in less popular talks included:\n\nserotonin\ncircuitry\nintergalactic\npixels\nplacebo\n\nThese findings suggest that highly viewed TED Talks may rely more heavily on broadly relatable language, while less popular talks often contain more technical or specialized vocabulary.\nWhile these conclusions are somewhat speculative, they provide insight into how communication style may influence audience engagement.\n\n\n\n\n\n\n\nPositive sentiment showed a modest association with TED Talk popularity.\n\n\n\nHighly viewed TED Talks tended to emphasize language that was accessible to a broader audience.\n\n\n\nPopularity is likely influenced by many factors beyond language alone, including:\n\nSpeaker reputation\nStorytelling ability\nTopic relevance\nTiming\nProduction quality\n\n\n\n\n\n\nThrough this project, I gained experience with:\n\nNatural Language Processing (NLP)\nText Mining\nSentiment Analysis\nTF-IDF Analysis\nRegular Expressions\nData Cleaning\nData Visualization\nScientific Communication\n\n\n\n\n\nThis project demonstrated how computational text analysis can uncover patterns that may not be obvious through casual observation alone. By combining transcript text with audience engagement metrics, we were able to investigate how language, emotion, and communication style interact within one of the world’s most influential public speaking platforms.\nThe project strengthened my skills in data wrangling, visualization, natural language processing, and communicating technical findings to a broader audience.\n\n\n\n\n\n\n\n\n\n\nTED Talks Dataset (Kaggle)"
   },
   {
-    "objectID": "projects.html#featured-projects",
-    "href": "projects.html#featured-projects",
-    "title": "Projects",
-    "section": "Featured Projects",
-    "text": "Featured Projects\n\npristineR Package\nAn R package designed to simplify common data-cleaning and summarization tasks through user-friendly helper functions.\nSkills emphasized: - R package development - Documentation - Data cleaning pipelines - Error handling - GitHub collaboration\n\n\n\nSQL Project\nA project focused on querying and analyzing structured datasets using SQL.\nSkills emphasized: - Database querying - Data organization - Relational databases - Data interpretation\n\n\n\nText Analysis Project\nA computational text analysis project involving pattern recognition and visualization of textual datasets.\nSkills emphasized: - Text mining - Natural language processing - Data visualization - Statistical analysis\n\n\n\nPoster Project\nA scientific communication project focused on presenting technical material clearly and effectively through visual design.\nSkills emphasized: - Scientific communication - Figure design - Data presentation - Visual storytelling\n\n\n\nResearch Beyond Class\nAdditional scientific and research experiences outside of coursework, including literature interpretation and presentation development.\nSkills emphasized: - Research analysis - Scientific literature review - Presentation design - Biochemistry communication ```"
-  },
-  {
-    "objectID": "projects/pristineR.html",
-    "href": "projects/pristineR.html",
-    "title": "pristineR Package",
+    "objectID": "projects/text_analysis.html#project-overview",
+    "href": "projects/text_analysis.html#project-overview",
+    "title": "What Makes a TED Talk Inspiring?",
     "section": "",
-    "text": "pristineR is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.\nThe package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.\nThis project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration.\n\n\n\n\nMany datasets require extensive cleaning before analysis can begin. I created pristineR to streamline repetitive preprocessing tasks into lightweight helper functions that are easy to use and designed to fail safely when invalid inputs are encountered.\nThis project also gave me experience thinking about usability and documentation from the perspective of future users."
+    "text": "In this project, we used natural language processing and text mining techniques in R to investigate patterns within TED Talk transcripts. By combining transcript text with metadata such as view counts, we explored how language use may influence audience engagement.\nThe analysis focused on two primary questions:\n\nDo highly viewed TED Talks use different emotional language than less popular talks?\nAre certain words or themes more characteristic of popular versus unpopular TED Talks?"
   },
   {
-    "objectID": "projects/pristineR.html#project-overview",
-    "href": "projects/pristineR.html#project-overview",
-    "title": "pristineR Package",
+    "objectID": "projects/text_analysis.html#tools-used",
+    "href": "projects/text_analysis.html#tools-used",
+    "title": "What Makes a TED Talk Inspiring?",
     "section": "",
-    "text": "pristineR is an R package designed to simplify common data-cleaning and summarization tasks through safer, user-friendly helper functions.\nThe package focuses on preprocessing issues commonly encountered in real-world datasets, including: - inconsistent date formats, - messy column names, - and missing values.\nThis project was developed as part of my data science coursework and helped strengthen my experience with package development, documentation, reproducible workflows, and GitHub collaboration."
+    "text": "R\ntidytext\ntidyverse\nggplot2\nRegular Expressions (Regex)\nSentiment Analysis\nTF-IDF Analysis"
   },
   {
-    "objectID": "projects/pristineR.html#motivation",
-    "href": "projects/pristineR.html#motivation",
-    "title": "pristineR Package",
+    "objectID": "projects/text_analysis.html#data-sources",
+    "href": "projects/text_analysis.html#data-sources",
+    "title": "What Makes a TED Talk Inspiring?",
     "section": "",
-    "text": "Many datasets require extensive cleaning before analysis can begin. I created pristineR to streamline repetitive preprocessing tasks into lightweight helper functions that are easy to use and designed to fail safely when invalid inputs are encountered.\nThis project also gave me experience thinking about usability and documentation from the perspective of future users."
+    "text": "The project used two datasets from the Kaggle TED Talks collection.\n\n\nIncluded:\n\nSpeaker names\nTalk titles\nView counts\nTags\nPublication dates\nNumber of comments\n\n\n\n\nIncluded:\n\nFull TED Talk transcripts\nTED Talk URLs\n\nThe datasets were joined using TED Talk URLs, allowing transcript text to be analyzed alongside popularity metrics."
   },
   {
-    "objectID": "projects/pristineR.html#why-pristiner",
-    "href": "projects/pristineR.html#why-pristiner",
-    "title": "pristineR Package",
-    "section": "Why pristineR?",
-    "text": "Why pristineR?\nMany real-world datasets contain inconsistent date formats, messy column names, and missing values that require repetitive cleaning before analysis can begin.\npristineR was created to simplify these common preprocessing tasks through lightweight helper functions that are easy to use, well documented, and designed to fail safely when given invalid inputs."
+    "objectID": "projects/text_analysis.html#data-preparation",
+    "href": "projects/text_analysis.html#data-preparation",
+    "title": "What Makes a TED Talk Inspiring?",
+    "section": "",
+    "text": "Before analysis, the transcripts were cleaned by:\n\nRemoving stop words\nRemoving numbers\nRemoving audience cues such as applause\nRetaining laughter markers when relevant\nTokenizing transcript text into individual words\n\nThe cleaned dataset was then used for sentiment analysis and TF-IDF analysis."
   },
   {
-    "objectID": "projects/pristineR.html#installation",
-    "href": "projects/pristineR.html#installation",
-    "title": "pristineR Package",
-    "section": "Installation",
-    "text": "Installation\nYou can install the development version of pristineR from GitHub with:\n# install.packages(\"remotes\")\n# install.packages(\"devtools\")\ndevtools::install_github(\"ADC-405-S26/pristineR\")"
+    "objectID": "projects/text_analysis.html#sentiment-analysis-and-ted-talk-popularity",
+    "href": "projects/text_analysis.html#sentiment-analysis-and-ted-talk-popularity",
+    "title": "What Makes a TED Talk Inspiring?",
+    "section": "",
+    "text": "To investigate emotional language, we applied the NRC sentiment lexicon to classify words into emotional categories.\nPositive emotions included:\n\nJoy\nTrust\nAnticipation\nSurprise\n\nNegative emotions included:\n\nFear\nAnger\nSadness\nDisgust\n\nEach TED Talk received a normalized sentiment score that was compared against total view counts.\n\n\n\n\n\n\nThis visualization explores the relationship between emotional language and TED Talk popularity.\nA slight positive relationship emerged between emotional positivity and popularity. Talks containing more optimistic and uplifting language tended to receive somewhat higher view counts on average.\nHowever, the relationship was not especially strong. Many talks with neutral or negative sentiment still achieved high view counts, suggesting that emotional positivity alone does not determine success.\nOther factors such as speaker reputation, storytelling ability, topic relevance, production quality, and timing likely play major roles in audience engagement."
   },
   {
-    "objectID": "projects/pristineR.html#load-the-package",
-    "href": "projects/pristineR.html#load-the-package",
-    "title": "pristineR Package",
-    "section": "Load the Package",
-    "text": "Load the Package\nlibrary(pristineR)"
+    "objectID": "projects/text_analysis.html#tf-idf-analysis-and-popularity-groups",
+    "href": "projects/text_analysis.html#tf-idf-analysis-and-popularity-groups",
+    "title": "What Makes a TED Talk Inspiring?",
+    "section": "",
+    "text": "Sentiment analysis captures only part of a transcript’s meaning. To investigate differences in word usage more deeply, we performed a TF-IDF analysis.\nTED Talks were divided into:\n\nMost Popular Talks (top 10% by views)\nLeast Popular Talks (bottom 50% by views)\n\nTF-IDF scores were used to identify words that were particularly important within one group relative to the other.\n\n\n\n\n\n\nThe dumbbell plot compares the importance of words across popularity groups.\nWords that were especially influential in popular talks included:\n\ngrit\nkindergarten\ndistractions\npublic’s\nripples\n\nWords that were more influential in less popular talks included:\n\nserotonin\ncircuitry\nintergalactic\npixels\nplacebo\n\nThese findings suggest that highly viewed TED Talks may rely more heavily on broadly relatable language, while less popular talks often contain more technical or specialized vocabulary.\nWhile these conclusions are somewhat speculative, they provide insight into how communication style may influence audience engagement."
   },
   {
-    "objectID": "projects/pristineR.html#example-dataset",
-    "href": "projects/pristineR.html#example-dataset",
-    "title": "pristineR Package",
-    "section": "Example Dataset",
-    "text": "Example Dataset\nThe package contains an example dataset called messy_survey.\nThe dataset intentionally contains inconsistent column names, mixed date formats, and missing values."
+    "objectID": "projects/text_analysis.html#key-findings",
+    "href": "projects/text_analysis.html#key-findings",
+    "title": "What Makes a TED Talk Inspiring?",
+    "section": "",
+    "text": "Positive sentiment showed a modest association with TED Talk popularity.\n\n\n\nHighly viewed TED Talks tended to emphasize language that was accessible to a broader audience.\n\n\n\nPopularity is likely influenced by many factors beyond language alone, including:\n\nSpeaker reputation\nStorytelling ability\nTopic relevance\nTiming\nProduction quality"
   },
   {
-    "objectID": "projects/pristineR.html#clean-column-names",
-    "href": "projects/pristineR.html#clean-column-names",
-    "title": "pristineR Package",
-    "section": "Clean Column Names",
-    "text": "Clean Column Names\nDatasets imported from spreadsheets or surveys often contain spaces, punctuation, or inconsistent capitalization in column names.\nThe clean_names() function converts messy column names into snake_case format.\nnames(messy_survey)\n\ncleaned_data &lt;- clean_names(messy_survey)\n\nnames(cleaned_data)"
+    "objectID": "projects/text_analysis.html#skills-developed",
+    "href": "projects/text_analysis.html#skills-developed",
+    "title": "What Makes a TED Talk Inspiring?",
+    "section": "",
+    "text": "Through this project, I gained experience with:\n\nNatural Language Processing (NLP)\nText Mining\nSentiment Analysis\nTF-IDF Analysis\nRegular Expressions\nData Cleaning\nData Visualization\nScientific Communication"
   },
   {
-    "objectID": "projects/pristineR.html#parse-dates",
-    "href": "projects/pristineR.html#parse-dates",
-    "title": "pristineR Package",
-    "section": "Parse Dates",
-    "text": "Parse Dates\nDatasets frequently contain dates stored in multiple formats.\nThe safe_date_parse() function safely converts these values into standard Date objects.\ncleaned_data$submission_date &lt;-\n  safe_date_parse(cleaned_data$submission_date)\n\ncleaned_data"
+    "objectID": "projects/text_analysis.html#reflection",
+    "href": "projects/text_analysis.html#reflection",
+    "title": "What Makes a TED Talk Inspiring?",
+    "section": "",
+    "text": "This project demonstrated how computational text analysis can uncover patterns that may not be obvious through casual observation alone. By combining transcript text with audience engagement metrics, we were able to investigate how language, emotion, and communication style interact within one of the world’s most influential public speaking platforms.\nThe project strengthened my skills in data wrangling, visualization, natural language processing, and communicating technical findings to a broader audience."
   },
   {
-    "objectID": "projects/pristineR.html#handling-invalid-dates",
-    "href": "projects/pristineR.html#handling-invalid-dates",
-    "title": "pristineR Package",
-    "section": "Handling Invalid Dates",
-    "text": "Handling Invalid Dates\nIf a date cannot be parsed, safe_date_parse() returns NA and produces a warning message instead of stopping execution completely.\nsafe_date_parse(c(\"2024-01-01\", \"bad-date\"))"
-  },
-  {
-    "objectID": "projects/pristineR.html#generate-summary-statistics",
-    "href": "projects/pristineR.html#generate-summary-statistics",
-    "title": "pristineR Package",
-    "section": "Generate Summary Statistics",
-    "text": "Generate Summary Statistics\nThe quick_summary() function generates common summary statistics for selected numeric columns.\nquick_summary(\n  cleaned_data,\n  c(\"exam_score\")\n)\nThe summary includes: - mean, - standard deviation, - minimum, - maximum, - and missing value counts."
-  },
-  {
-    "objectID": "projects/pristineR.html#function-parameters",
-    "href": "projects/pristineR.html#function-parameters",
-    "title": "pristineR Package",
-    "section": "Function Parameters",
-    "text": "Function Parameters\n\nsafe_date_parse(x)\n\nx: a character vector containing date values\n\n\n\nquick_summary(data, columns)\n\ndata: a data frame\ncolumns: character vector of numeric columns to summarize\n\n\n\nclean_names(data)\n\ndata: a data frame with column names to clean"
-  },
-  {
-    "objectID": "projects/pristineR.html#additional-example",
-    "href": "projects/pristineR.html#additional-example",
-    "title": "pristineR Package",
-    "section": "Additional Example",
-    "text": "Additional Example\npristineR can also be used with other messy datasets.\nexample_data &lt;- data.frame(\n  \"Customer Name\" = c(\"Alice\", \"Bob\"),\n  \"Purchase.Date\" = c(\"2024-01-01\", \"01/15/2024\"),\n  \"Total Sales $\" = c(120, 95)\n)\n\nexample_data &lt;- clean_names(example_data)\n\nexample_data$purchase_date &lt;-\n  safe_date_parse(example_data$purchase_date)\n\nexample_data"
-  },
-  {
-    "objectID": "projects/pristineR.html#package-functions",
-    "href": "projects/pristineR.html#package-functions",
-    "title": "pristineR Package",
-    "section": "Package Functions",
-    "text": "Package Functions\npristineR currently includes: - safe_date_parse() - quick_summary() - clean_names()"
-  },
-  {
-    "objectID": "projects/pristineR.html#skills-developed",
-    "href": "projects/pristineR.html#skills-developed",
-    "title": "pristineR Package",
-    "section": "Skills Developed",
-    "text": "Skills Developed\nThrough this project, I gained experience with: - R package development - Documentation writing - GitHub workflows - Reproducible analysis - Data cleaning pipelines - Error handling - User-centered function design"
-  },
-  {
-    "objectID": "projects/pristineR.html#revisions-after-feedback",
-    "href": "projects/pristineR.html#revisions-after-feedback",
-    "title": "pristineR Package",
-    "section": "Revisions After Feedback",
-    "text": "Revisions After Feedback\nFollowing peer review and instructor feedback, I expanded the project documentation to include: - clearer explanations of when and why to use each function, - additional edge case examples, - more detailed workflow demonstrations, - and improved descriptions throughout the README and vignette.\nThese revisions made the package easier to understand and more useful for future users."
-  },
-  {
-    "objectID": "projects/pristineR.html#github-repository",
-    "href": "projects/pristineR.html#github-repository",
-    "title": "pristineR Package",
-    "section": "GitHub Repository",
-    "text": "GitHub Repository\nView the pristineR repository ````"
+    "objectID": "projects/text_analysis.html#data-source",
+    "href": "projects/text_analysis.html#data-source",
+    "title": "What Makes a TED Talk Inspiring?",
+    "section": "",
+    "text": "TED Talks Dataset (Kaggle)"
   }
 ]
